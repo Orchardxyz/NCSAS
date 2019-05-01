@@ -79,43 +79,45 @@ QTabBar::tab {
      <attribute name="title">
       <string>品牌评论数据</string>
      </attribute>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableView" name="tableView">
       <property name="geometry">
        <rect>
-        <x>11</x>
-        <y>43</y>
-        <width>901</width>
+        <x>30</x>
+        <y>80</y>
+        <width>871</width>
         <height>401</height>
        </rect>
       </property>
-      <column>
-       <property name="text">
-        <string>序号</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>时间</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>评论</string>
-       </property>
-      </column>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QComboBox" name="comboBox">
       <property name="geometry">
        <rect>
-        <x>11</x>
-        <y>21</y>
-        <width>54</width>
-        <height>16</height>
+        <x>30</x>
+        <y>10</y>
+        <width>87</width>
+        <height>22</height>
        </rect>
       </property>
-      <property name="text">
-       <string>xxx品牌</string>
-      </property>
+      <item>
+       <property name="text">
+        <string>惠普好评</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>惠普差评</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>联想好评</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>联想差评</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>
