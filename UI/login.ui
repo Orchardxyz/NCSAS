@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>610</width>
+    <height>419</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>611</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">* {
+	background: rgb(255,255,255);
+	font-size: 15px;
+	font-family: sans-serif;
+}
+QFrame {
+	border: solid 1px rgba(0,0,0);
+	background-image: url(':/image/computer3.jpg')
+}
+QLineEdit {
+	/*color: #8d98a1;*/
+	color: #FFFFFF;
+	font-size: 20px;
+	font-style: Italic bold;
+	border-style: outset;
+	border-radius: 10px;
+	/*background-color: #405361;*/
+	background-color: #0066CC;
+}
+QPushButton {
+	font-size: 25px;
+	background: #ced1d8;
+	border-style: outset;
+	border-radius: 10px;
+}
+QPushButton:pressed {
+	background-color: rgb(224,0,0);
+	border-style: inset;
+}
+QCheckBox {
+	background: rgba(85,170,255,0);
+	color: white;
+}
+QLabel {
+	background: rgba(85,170,255,0);
+	color: white;
+	font-style: Italic bold;
+	font-size: 15px;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>280</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Login in</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>110</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Enter Your Username</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter Your Password</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="img/bg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
