@@ -11,7 +11,6 @@
 
 from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
 import sys
-import numpy as np
 from login import Ui_Form
 
 class mywindow(Ui_Form, QWidget):

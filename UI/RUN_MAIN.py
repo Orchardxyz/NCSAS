@@ -62,7 +62,7 @@ class mywindow(Ui_Form, QWidget):
         # self.tableView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
     def comboBoxSelected(self, index):
-        print('当前项：', self.comboBox.itemText(index))
+        print('当前所在位置：', self.comboBox.itemText(index))
         self.tableComments(_brand[index])
 
     # 连接数据库
