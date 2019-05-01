@@ -238,4 +238,4 @@ if __name__ == "__main__":
     form = PaymentDlg()
     form.show()
     app.exec_()
-    print("test")
+    print("testtest")
