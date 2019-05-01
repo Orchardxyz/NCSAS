@@ -69,7 +69,7 @@ QLabel {
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonLogin">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -82,7 +82,7 @@ QLabel {
      <string>Login</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="inputUsername">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -95,7 +95,7 @@ QLabel {
      <string>Enter Your Username</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="inputPassword">
     <property name="geometry">
      <rect>
       <x>160</x>

@@ -56,16 +56,16 @@ class Ui_Form(object):
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.pushButton = QtWidgets.QPushButton(self.frame)
-        self.pushButton.setGeometry(QtCore.QRect(210, 270, 151, 51))
-        self.pushButton.setObjectName("pushButton")
-        self.lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.lineEdit.setGeometry(QtCore.QRect(160, 100, 271, 51))
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.frame)
-        self.lineEdit_2.setGeometry(QtCore.QRect(160, 190, 271, 51))
-        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.buttonLogin = QtWidgets.QPushButton(self.frame)
+        self.buttonLogin.setGeometry(QtCore.QRect(210, 270, 151, 51))
+        self.buttonLogin.setObjectName("buttonLogin")
+        self.inputUsername = QtWidgets.QLineEdit(self.frame)
+        self.inputUsername.setGeometry(QtCore.QRect(160, 100, 271, 51))
+        self.inputUsername.setObjectName("inputUsername")
+        self.inputPassword = QtWidgets.QLineEdit(self.frame)
+        self.inputPassword.setGeometry(QtCore.QRect(160, 190, 271, 51))
+        self.inputPassword.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.inputPassword.setObjectName("inputPassword")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -73,8 +73,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Login"))
-        self.lineEdit.setPlaceholderText(_translate("Form", "Enter Your Username"))
-        self.lineEdit_2.setPlaceholderText(_translate("Form", "Enter Your Password"))
+        self.buttonLogin.setText(_translate("Form", "Login"))
+        self.inputUsername.setPlaceholderText(_translate("Form", "Enter Your Username"))
+        self.inputPassword.setPlaceholderText(_translate("Form", "Enter Your Password"))
 
 import qrc.bg

@@ -16,10 +16,10 @@ import pymysql
 
 _brand = ['hpscorepos', 'hpscoreneg','lenovoscorepos', 'lenovoscoreneg']
 
-class mywindow(Ui_Form, QWidget):
+class mainWindow(Ui_Form, QWidget):
 
     def __init__(self, parent=None):
-        super(mywindow, self).__init__(parent)
+        super(mainWindow, self).__init__(parent)
         self.setupUi(self)
         self.setWindowTitle('笔记本电脑评论情感分析系统')
         self.tableComments(_brand[0])    # 默认初始化为惠普好评数据
@@ -82,6 +82,6 @@ class mywindow(Ui_Form, QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = mywindow()
+    w = mainWindow()
     w.show()
     sys.exit(app.exec_())
