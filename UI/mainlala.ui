@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-10</y>
+     <y>0</y>
      <width>771</width>
      <height>511</height>
     </rect>
@@ -30,7 +30,9 @@
 }
 QFrame {
 	border: solid 1px rgba(0,0,0);
-	background-image: url(:/main/newmainla.png)
+	border-image: url(:/main/newmainla.png);
+ 	background-color: rgb(230, 230, 230)
+
 }
 
 QPushButton {
@@ -42,11 +44,26 @@ QPushButton {
 	border-style: outset;
 
 	border-radius: 10px;
-opacity:0.7;
+	
+	
+	font: 60 30pt &quot;Verdana&quot;;
+     
 }
 QPushButton:pressed {
 	background-color: white;
 	border-style: inset;
+}
+
+QLabel {
+border-image:url(); 
+background-color:transparent;
+
+ font:italic bold  arial sans-serif ;
+	font: 57 13pt  &quot;Helvetica Neue&quot;;
+font-weight:400;
+font-size:50px;
+font-color:rgb(253, 102, 102);
+color:
 }</string>
    </property>
    <property name="frameShape">
@@ -55,30 +72,17 @@ QPushButton:pressed {
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>222</x>
-      <y>250</y>
-      <width>291</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Archievement</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>100</y>
-      <width>291</width>
-      <height>101</height>
+      <x>280</x>
+      <y>135</y>
+      <width>201</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="text">
-     <string>Comment</string>
+     <string>评论测试</string>
     </property>
     <property name="flat">
      <bool>false</bool>
@@ -102,7 +106,7 @@ font-weight: bold;
 }</string>
     </property>
     <property name="text">
-     <string>help</string>
+     <string>帮助</string>
     </property>
     <property name="flat">
      <bool>true</bool>
@@ -126,10 +130,39 @@ font-weight: bold;
 }</string>
     </property>
     <property name="text">
-     <string>exit</string>
+     <string>退出</string>
     </property>
     <property name="flat">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>531</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>欢迎进入NCSAS系统</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>279</x>
+      <y>256</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>研究成果</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
