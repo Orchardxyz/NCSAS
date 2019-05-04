@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>763</width>
-    <height>502</height>
+    <width>1124</width>
+    <height>712</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="frameMain">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>771</width>
-     <height>511</height>
+     <width>1121</width>
+     <height>711</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -30,9 +30,8 @@
 }
 QFrame {
 	border: solid 1px rgba(0,0,0);
-	border-image: url(:/main/newmainla.png);
- 	background-color: rgb(230, 230, 230)
-
+	/*background-image: url(:/main/newmainla.png);
+	background: #FFFFF0;*/
 }
 
 QPushButton {
@@ -44,26 +43,11 @@ QPushButton {
 	border-style: outset;
 
 	border-radius: 10px;
-	
-	
-	font: 60 30pt &quot;Verdana&quot;;
-     
+opacity:0.7;
 }
 QPushButton:pressed {
 	background-color: white;
 	border-style: inset;
-}
-
-QLabel {
-border-image:url(); 
-background-color:transparent;
-
- font:italic bold  arial sans-serif ;
-	font: 57 13pt  &quot;Helvetica Neue&quot;;
-font-weight:400;
-font-size:50px;
-font-color:rgb(253, 102, 102);
-color:
 }</string>
    </property>
    <property name="frameShape">
@@ -72,27 +56,43 @@ color:
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="buttonArchievement">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>135</y>
-      <width>201</width>
-      <height>61</height>
+      <x>430</x>
+      <y>350</y>
+      <width>221</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
-     <string>评论测试</string>
+     <string>研究成果</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCommentAnalysis">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>200</y>
+      <width>221</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="text">
+     <string>评价分析</string>
     </property>
     <property name="flat">
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonHelp">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>470</y>
+      <x>910</x>
+      <y>670</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -106,17 +106,17 @@ font-weight: bold;
 }</string>
     </property>
     <property name="text">
-     <string>帮助</string>
+     <string>帮助手册</string>
     </property>
     <property name="flat">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="buttonExit">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>470</y>
+      <x>1020</x>
+      <y>670</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -136,39 +136,11 @@ font-weight: bold;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>0</y>
-      <width>531</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>欢迎进入NCSAS系统</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_5">
-    <property name="geometry">
-     <rect>
-      <x>279</x>
-      <y>256</y>
-      <width>201</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>研究成果</string>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
   </widget>
  </widget>
- <resources>
-  <include location="qrc/mainbg.qrc"/>
- </resources>
+ <resources/>
  <connections/>
+ <slots>
+  <slot>exit()</slot>
+ </slots>
 </ui>
