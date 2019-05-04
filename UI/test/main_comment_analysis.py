@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+# 语句测试的界面(真正使用的语句测试的界面)
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")

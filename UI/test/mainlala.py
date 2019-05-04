@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+# 主(欢迎)界面的界面
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")

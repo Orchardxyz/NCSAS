@@ -15,6 +15,7 @@ from Test import test
 import sys
 
 
+# 输入评论测试的入口文件
 class comment_analysis_window(QWidget, Ui_Dialog):
     def __init__(self):
         super(comment_analysis_window, self).__init__()
