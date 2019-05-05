@@ -65,15 +65,22 @@ class test(UI_MAIN, QWidget):
         self.close()
 
     def switchToArchievement(self):
+        # 可运行的第一次
+        # self.hide()
+        # newArchDiag = QDialog()
+        # newArchUi = archievement_window()
+        # newArchUi.setupUi(newArchDiag)
+        # newArchDiag.show()
+        # newArchDiag.exec_()
+        # self.show()
+
+        # 第二次试验，测试成功，就用这个
         self.hide()
         newArchDiag = QDialog()
-        newArchUi = archievement_window()
-        newArchUi.setupUi(newArchDiag)
+        newArchUi = archievement_window(newArchDiag)
         newArchDiag.show()
         newArchDiag.exec_()
         self.show()
-
-        # ArchievementWindow.show()
 
 
 if __name__ == '__main__':
