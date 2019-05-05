@@ -44,11 +44,9 @@ class archievement_window(QWidget, Ui_Dialog):
         self.setupUi(newDialog)
         self.setWindowTitle("NCSAS-研究成果")
 
-        self.buttonReturn.clicked.connect(self.returnMain)
+        self.archieveDialog = newDialog
 
-
-
-
+        self.buttonReturn.clicked.connect (self.returnMain)
 
         #惠普差评的跳转
         self.buttonBad_2.clicked.connect(self.switchToHpBad)
@@ -63,8 +61,8 @@ class archievement_window(QWidget, Ui_Dialog):
         self.buttonPraise.clicked.connect (self.switchToLenovoPraise)
 
 
-    # def returnMain2(self):
-    #     super.returnMain
+    def returnMain(self):
+        self.archieveDialog.close()
 
     def switchToLenovoBad(self):
         #联想差评

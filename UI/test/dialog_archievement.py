@@ -13,7 +13,6 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1120, 775)
-        self.archieveDialog = Dialog
         self.frameArchievement = QtWidgets.QFrame(Dialog)
         self.frameArchievement.setGeometry(QtCore.QRect(0, 0, 1121, 771))
         self.frameArchievement.setStyleSheet("")
@@ -204,9 +203,97 @@ class Ui_Dialog(object):
         self.tabAchievements.addTab(self.tabPreProcessed, "")
         self.tabBrandComparison = QtWidgets.QWidget()
         self.tabBrandComparison.setObjectName("tabBrandComparison")
+        self.brandFrame = QtWidgets.QFrame(self.tabBrandComparison)
+        self.brandFrame.setGeometry(QtCore.QRect(-10, -10, 1091, 711))
+        self.brandFrame.setStyleSheet("QLabel{\n"
+"   background-color:rgb(179, 179, 179);\n"
+"\n"
+"    font: 75 40pt \"American Typewriter\";\n"
+"font-weight:500;\n"
+"}")
+        self.brandFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.brandFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.brandFrame.setObjectName("brandFrame")
+        self.label = QtWidgets.QLabel(self.brandFrame)
+        self.label.setGeometry(QtCore.QRect(9, 10, 537, 81))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.brandFrame)
+        self.label_2.setGeometry(QtCore.QRect(550, 10, 537, 81))
+        self.label_2.setStyleSheet("QLabel{\n"
+"background-color:rgb(76, 76, 76);\n"
+"color:rgb(230, 230, 230)\n"
+"}")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.brandFrame)
+        self.label_3.setGeometry(QtCore.QRect(290, 30, 341, 101))
+        self.label_3.setStyleSheet("QLabel{\n"
+" background-color:transparent;\n"
+"font-size:500%;\n"
+"\n"
+"    font: 85 60pt \"American Typewriter\";\n"
+"font-weight:500;\n"
+"}")
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.brandFrame)
+        self.label_4.setGeometry(QtCore.QRect(350, 30, 341, 101))
+        self.label_4.setStyleSheet("QLabel{\n"
+" background-color:transparent;\n"
+"    font: 85 60pt \"American Typewriter\";\n"
+"font-weight:500;\n"
+"color:rgb(179, 179, 179)\n"
+"}")
+        self.label_4.setObjectName("label_4")
+        self.frame = QtWidgets.QFrame(self.brandFrame)
+        self.frame.setGeometry(QtCore.QRect(10, 110, 1071, 591))
+        self.frame.setStyleSheet("QFrame{\n"
+" background-color:rgb(255, 255, 255)\n"
+"}")
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
         self.tabAchievements.addTab(self.tabBrandComparison, "")
         self.tabDictionary = QtWidgets.QWidget()
         self.tabDictionary.setObjectName("tabDictionary")
+        self.frame_2 = QtWidgets.QFrame(self.tabDictionary)
+        self.frame_2.setGeometry(QtCore.QRect(0, 10, 1081, 681))
+        self.frame_2.setStyleSheet("QPushButton{\n"
+"    background:rgb(204, 204, 204);\n"
+"\n"
+"    \n"
+"    font: 75 20pt \"Helvetica Neue\";\n"
+"\n"
+"font-weight:500;\n"
+" border-radius: 10px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background: rgb(230, 230, 230)\n"
+"}\n"
+"\n"
+"QFrame{\n"
+" background-color:rgb(255, 255, 255)\n"
+"}")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.pushButton = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton.setGeometry(QtCore.QRect(60, 181, 131, 61))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_2.setGeometry(QtCore.QRect(60, 80, 131, 61))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_3 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_3.setGeometry(QtCore.QRect(61, 490, 131, 61))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_4 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_4.setGeometry(QtCore.QRect(61, 386, 131, 61))
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.pushButton_5 = QtWidgets.QPushButton(self.frame_2)
+        self.pushButton_5.setGeometry(QtCore.QRect(60, 285, 131, 61))
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.textBrowser = QtWidgets.QTextBrowser(self.frame_2)
+        self.textBrowser.setGeometry(QtCore.QRect(230, 50, 791, 591))
+        self.textBrowser.setObjectName("textBrowser")
         self.tabAchievements.addTab(self.tabDictionary, "")
         self.buttonReturn = QtWidgets.QPushButton(self.frameArchievement)
         self.buttonReturn.setGeometry(QtCore.QRect(1020, 740, 93, 28))
@@ -217,20 +304,20 @@ class Ui_Dialog(object):
         self.buttonReturn.setObjectName("buttonReturn")
 
         self.retranslateUi(Dialog)
-        self.tabAchievements.setCurrentIndex(0)
-        self.tabBrand.setCurrentIndex(1)
-        self.stackedWidgetContent.setCurrentIndex(1)
-        self.toolBoxPraise.setCurrentIndex(3)
+        self.tabAchievements.setCurrentIndex(2)
+        self.tabBrand.setCurrentIndex(0)
+        self.stackedWidgetContent.setCurrentIndex(0)
+        self.toolBoxPraise.setCurrentIndex(0)
         self.toolBoxCotent.setCurrentIndex(3)
-        self.stackedWidgetContent_2.setCurrentIndex(1)
-        self.toolBoxPraise_2.setCurrentIndex(3)
+        self.stackedWidgetContent_2.setCurrentIndex(0)
+        self.toolBoxPraise_2.setCurrentIndex(0)
         self.toolBoxCotent_2.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
-        self.buttonReturn.clicked.connect (self.returnMain)
-
-    def returnMain(self):
-                # 返回主界面
-        self.archieveDialog.close ()
+    #     self.buttonReturn.clicked.connect (self.returnMain)
+    #
+    # def returnMain(self):
+    #             # 返回主界面
+    #     self.archieveDialog.close ()
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
@@ -262,7 +349,16 @@ class Ui_Dialog(object):
 "评"))
         self.tabBrand.setTabText(self.tabBrand.indexOf(self.tabHp), _translate("Dialog", "惠普"))
         self.tabAchievements.setTabText(self.tabAchievements.indexOf(self.tabPreProcessed), _translate("Dialog", "预处理"))
+        self.label.setText(_translate("Dialog", "          联想Lenovo笔记本"))
+        self.label_2.setText(_translate("Dialog", "              惠普HP笔记本"))
+        self.label_3.setText(_translate("Dialog", "              V"))
+        self.label_4.setText(_translate("Dialog", "              S"))
         self.tabAchievements.setTabText(self.tabAchievements.indexOf(self.tabBrandComparison), _translate("Dialog", "品牌对比"))
+        self.pushButton.setText(_translate("Dialog", "情感词典"))
+        self.pushButton_2.setText(_translate("Dialog", "属性词词典"))
+        self.pushButton_3.setText(_translate("Dialog", "停用词词典"))
+        self.pushButton_4.setText(_translate("Dialog", "连接词词典"))
+        self.pushButton_5.setText(_translate("Dialog", "副词词典"))
         self.tabAchievements.setTabText(self.tabAchievements.indexOf(self.tabDictionary), _translate("Dialog", "词典"))
         self.buttonReturn.setText(_translate("Dialog", "返回"))
 

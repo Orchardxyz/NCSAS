@@ -46,7 +46,7 @@
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabPreProcessed">
      <attribute name="title">
@@ -70,7 +70,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabLenovo">
        <attribute name="title">
@@ -123,7 +123,7 @@
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="pagePraise">
           <widget class="QToolBox" name="toolBoxPraise">
@@ -136,7 +136,7 @@
             </rect>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="pageItemComments">
             <property name="geometry">
@@ -387,7 +387,7 @@
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="pagePraise_2">
           <widget class="QToolBox" name="toolBoxPraise_2">
@@ -400,7 +400,7 @@
             </rect>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="pageItemComments_3">
             <property name="geometry">
@@ -606,11 +606,241 @@
      <attribute name="title">
       <string>品牌对比</string>
      </attribute>
+     <widget class="QFrame" name="brandFrame">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-10</y>
+        <width>1091</width>
+        <height>711</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+   background-color:rgb(179, 179, 179);
+
+	font: 75 40pt &quot;American Typewriter&quot;;
+font-weight:500;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>10</y>
+         <width>537</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>          联想Lenovo笔记本</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>10</y>
+         <width>537</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+background-color:rgb(76, 76, 76);
+color:rgb(230, 230, 230)
+}</string>
+       </property>
+       <property name="text">
+        <string>              惠普HP笔记本</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>30</y>
+         <width>341</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+ background-color:transparent;
+font-size:500%;
+
+	font: 85 60pt &quot;American Typewriter&quot;;
+font-weight:500;
+}</string>
+       </property>
+       <property name="text">
+        <string>              V</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>30</y>
+         <width>341</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+ background-color:transparent;
+	font: 85 60pt &quot;American Typewriter&quot;;
+font-weight:500;
+color:rgb(179, 179, 179)
+}</string>
+       </property>
+       <property name="text">
+        <string>              S</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>1071</width>
+         <height>591</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+ background-color:rgb(255, 255, 255)
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tabDictionary">
      <attribute name="title">
       <string>词典</string>
      </attribute>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>1081</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+    background:rgb(204, 204, 204);
+
+	
+	font: 75 20pt &quot;Helvetica Neue&quot;;
+
+font-weight:500;
+ border-radius: 10px;
+}
+
+QPushButton:pressed {
+	background: rgb(230, 230, 230)
+}
+
+QFrame{
+ background-color:rgb(255, 255, 255)
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>181</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>情感词典</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>属性词词典</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>61</x>
+         <y>490</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>停用词词典</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>61</x>
+         <y>386</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>连接词词典</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>285</y>
+         <width>131</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>副词词典</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>50</y>
+         <width>791</width>
+         <height>591</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="buttonReturn">
