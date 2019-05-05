@@ -75,7 +75,6 @@ class archievement_window(QWidget, Ui_Dialog):
         self.archieveDialog.close()
 
     '''联想/惠普 的 好评/差评 切换事件'''
-
     def switchToLenovoPraise(self):
         #联想好评
         self.stackedWidgetContent.setCurrentWidget(self.pagePraise)
