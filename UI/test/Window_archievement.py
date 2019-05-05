@@ -21,6 +21,10 @@ class archievement_window(QWidget, Ui_Form):
         self.setWindowTitle("NCSAS-研究成果")
 
 
+    def returnMain(self):
+        self.close()
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = archievement_window()

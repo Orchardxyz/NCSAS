@@ -28,7 +28,6 @@ class comment_analysis_window(QWidget, Ui_Dialog):
         # self.hide()
         # self.testWindow = test()
         # self.testWindow.show()
-        print('111111111111')
         self.close()
 
 

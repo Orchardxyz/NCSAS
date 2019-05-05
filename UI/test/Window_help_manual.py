@@ -18,9 +18,6 @@ class help_manual_window(QWidget, Ui_Form):
 
     # 返回主界面
     def returnMain(self):
-        print("111111111")
-
-
         self.close()
 
 

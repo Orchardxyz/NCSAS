@@ -13,6 +13,8 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1120, 775)
+        # 获取dialog,方便返回主界面
+        self.archieveDialog = Dialog
         self.frameArchievement = QtWidgets.QFrame(Dialog)
         self.frameArchievement.setGeometry(QtCore.QRect(0, 0, 1121, 771))
         self.frameArchievement.setStyleSheet("")
@@ -226,6 +228,14 @@ class Ui_Dialog(object):
         self.toolBoxCotent_2.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        # 返回主界面
+        self.buttonReturn.clicked.connect(self.returnMain)
+
+    def returnMain(self):
+        # 返回主界面
+        self.archieveDialog.close()
+
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
@@ -259,4 +269,7 @@ class Ui_Dialog(object):
         self.tabAchievements.setTabText(self.tabAchievements.indexOf(self.tabBrandComparison), _translate("Dialog", "品牌对比"))
         self.tabAchievements.setTabText(self.tabAchievements.indexOf(self.tabDictionary), _translate("Dialog", "词典"))
         self.buttonReturn.setText(_translate("Dialog", "返回"))
+
+
+
 
