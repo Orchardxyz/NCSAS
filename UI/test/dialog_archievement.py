@@ -235,7 +235,6 @@ class Ui_Dialog(object):
         # 返回主界面
         self.archieveDialog.close()
 
-
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))

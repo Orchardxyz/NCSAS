@@ -13,7 +13,9 @@ from mainlala import Ui_Form as UI_MAIN
 # from Window_comment_analysis import comment_analysis_window
 # from Window_archievement import archievement_window
 from dialog_comment_analysis import Ui_Dialog as comment_analysis_window
-from dialog_archievement import Ui_Dialog as archievement_window
+# from dialog_archievement import Ui_Dialog as archievement_window
+
+from Window_dialog_archievement import archievement_window
 
 from dialog_help import Ui_Form as help_window
 
@@ -55,6 +57,7 @@ class test(UI_MAIN, QWidget):
         self.show()
 
     def switchToHelpManual(self):
+        # 退出帮助
         window.show()
 
     def exitMainWindow(self):
