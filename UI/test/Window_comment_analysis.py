@@ -20,7 +20,7 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
         super(comment_analysis_window, self).__init__()
         self.setupUi(newDialog)
         self.commentDialog = newDialog
-        self.setWindowTitle("NCSAS-评价分析")
+        self.commentDialog.setWindowTitle("NCSAS-评价分析")
         self.buttonReturn.clicked.connect(self.returnMain)
 
     # 返回主界面

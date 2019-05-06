@@ -49,9 +49,9 @@ class archievement_window(QWidget, Ui_Archievements):
         super(archievement_window, self).__init__()
 
         self.setupUi(newDialog)
-        self.setWindowTitle("NCSAS-研究成果")
 
         self.archieveDialog = newDialog
+        self.archieveDialog.setWindowTitle("NCSAS-研究成果")
 
         self.buttonReturn.clicked.connect(self.returnMain)
 
