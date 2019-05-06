@@ -6,14 +6,14 @@
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from dialog_archievement import Ui_Dialog
+from dialog_archievement import Ui_Archievements
 import sys
 
 from dbConnect import dbConnect
 
 
 # 研究成果展示页面运行入口2，现在正在使用
-class archievement_window(QWidget, Ui_Dialog):
+class archievement_window(QWidget, Ui_Archievements):
 
     # 原评论数据表名
     # tableNameList = ['lenovoscoreneg', 'lenovoscorepos','hpscoreneg','hpscorepos']
@@ -53,11 +53,31 @@ class archievement_window(QWidget, Ui_Dialog):
 
         self.archieveDialog = newDialog
 
-        self.buttonReturn.clicked.connect (self.returnMain)
+        self.buttonReturn.clicked.connect(self.returnMain)
+
+        # 按钮点击时的样式切换
+        self.clickStyle = "QPushButton{" "background: rgb(40,40,40);" "color: #FFF;" "}"
+        self.unclickStyle = "QPushButton{"  "}"
+
+        '''-******** [预处理]tab界面设置 ********-'''
 
         # 原评论数据表：[联想好评/差评，惠普好评/差评]
         self.originTable = [self.tableViewComments, self.tableViewComments_2, self.tableViewComments_3, self.tableViewComments_4]
 
+        '''页面加载完毕时初始化页面组件'''
+        # 设置默认tab
+        self.tabArchievements.setCurrentIndex(0)
+        self.tabBrand.setCurrentIndex(0)
+        # 隐藏数据表
+        self.stackedWidgetContentLenovo.setVisible(False)
+        self.stackedWidgetContentHp.setVisible(False)
+        # 设置默认toolBox
+        self.toolBoxPraise.setCurrentIndex(0)
+        self.toolBoxBad.setCurrentIndex(0)
+        self.toolBoxPraise_2.setCurrentIndex(0)
+        self.toolBoxBad_2.setCurrentIndex(0)
+
+        '''按钮事件'''
         #惠普差评的跳转
         self.buttonBad_2.clicked.connect(self.switchToHpBad)
 
@@ -65,34 +85,56 @@ class archievement_window(QWidget, Ui_Dialog):
         self.buttonPraise_2.clicked.connect(self.switchToHpPraise)
 
         # 联想差评的跳转
-        self.buttonBad.clicked.connect (self.switchToLenovoBad)
+        self.buttonBad.clicked.connect(self.switchToLenovoBad)
 
         # 联想好评的跳转
-        self.buttonPraise.clicked.connect (self.switchToLenovoPraise)
+        self.buttonPraise.clicked.connect(self.switchToLenovoPraise)
 
+        '''-******** [品牌对比]tab界面设置 ********-'''
 
+        '''-******** [词典]tab界面设置 ********-'''
+        # 建立词典按钮列表
+        self.dictionaryButtons = [self.dictAttributes, self.dictSentiment, self.dictAdverbs,
+                                  self.dictConjunctions, self.dictStopWords]
+        # lambda表达式传参
+        self.dictAttributes.clicked.connect(lambda: self.dictClicked(0))
+        self.dictSentiment.clicked.connect(lambda: self.dictClicked(1))
+        self.dictAdverbs.clicked.connect(lambda: self.dictClicked(2))
+        self.dictConjunctions.clicked.connect(lambda: self.dictClicked(3))
+        self.dictStopWords.clicked.connect(lambda: self.dictClicked(4))
+
+    # 返回主界面
     def returnMain(self):
         self.archieveDialog.close()
 
+    '''-////////// [预处理]tab界面的事件处理及方法 //////////-'''
     '''联想/惠普 的 好评/差评 切换事件'''
     def switchToLenovoPraise(self):
         #联想好评
-        self.stackedWidgetContent.setCurrentWidget(self.pagePraise)
+        self.buttonPraise.setStyleSheet(self.clickStyle)
+        self.buttonBad.setStyleSheet(self.unclickStyle)
+        self.stackedWidgetContentLenovo.setCurrentWidget(self.pagePraise)
         self.loadingOriginData('lenovo', 0)
 
     def switchToLenovoBad(self):
         #联想差评
-        self.stackedWidgetContent.setCurrentWidget(self.pageBad)
+        self.buttonBad.setStyleSheet(self.clickStyle)
+        self.buttonPraise.setStyleSheet(self.unclickStyle)
+        self.stackedWidgetContentLenovo.setCurrentWidget(self.pageBad)
         self.loadingOriginData('lenovo', 1)
 
     def switchToHpPraise(self):
         #惠普好评
-        self.stackedWidgetContent_2.setCurrentWidget(self.pagePraise_2)
+        self.buttonPraise_2.setStyleSheet(self.clickStyle)
+        self.buttonBad_2.setStyleSheet(self.unclickStyle)
+        self.stackedWidgetContentHp.setCurrentWidget(self.pagePraise_2)
         self.loadingOriginData('hp', 2)
 
     def switchToHpBad(self):
         #惠普差评
-        self.stackedWidgetContent_2.setCurrentWidget(self.pageBad_2)
+        self.buttonBad_2.setStyleSheet(self.clickStyle)
+        self.buttonPraise_2.setStyleSheet(self.unclickStyle)
+        self.stackedWidgetContentHp.setCurrentWidget(self.pageBad_2)
         self.loadingOriginData('hp', 3)
 
     '''数据加载'''
@@ -114,6 +156,9 @@ class archievement_window(QWidget, Ui_Dialog):
                 item = QStandardItem(str(temp_data))
                 self.model.setItem(i, j, item)
         self.originTable[index].setModel(self.model)
+        if brand == 'lenovo': self.stackedWidgetContentLenovo.setVisible(True)
+        else: self.stackedWidgetContentHp.setVisible(True)
+        '''表格样式'''
         # 设置行样式
         self.originTable[index].setAlternatingRowColors(True)
         # 隐藏横向滚动条
@@ -121,6 +166,17 @@ class archievement_window(QWidget, Ui_Dialog):
         # 所有列自动拉伸，充满界面，适用于列数较多且内容合适的表格model
         self.originTable[index].horizontalHeader().setStretchLastSection(True)
         self.originTable[index].horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+    '''-////////// [品牌对比]tab界面的事件处理及方法 //////////-'''
+
+    '''-////////// [词典]tab界面的事件处理及方法 //////////-'''
+    # 词典按钮点击事件
+    def dictClicked(self, index):
+        # 按钮变色
+        self.dictionaryButtons[index].setStyleSheet(self.clickStyle)
+        for i in range(0, len(self.dictionaryButtons)):
+            if i != index:
+                self.dictionaryButtons[i].setStyleSheet(self.unclickStyle)
 
 # if __name__ == '__main__':
 #     app = QApplication(sys.argv)

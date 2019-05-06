@@ -9,17 +9,17 @@
 @desc:
 '''
 from PyQt5.QtWidgets import *
-# from main_comment_analysis import Ui_Form
-from dialog_comment_analysis import Ui_Dialog
-from Test import test
+from PyQt5.QtGui import *
+from dialog_comment_analysis import Ui_CommentAnalysis
 import sys
 
 
 # 输入评论测试的入口文件
-class comment_analysis_window(QWidget, Ui_Dialog):
-    def __init__(self):
+class comment_analysis_window(QWidget, Ui_CommentAnalysis):
+    def __init__(self, newDialog):
         super(comment_analysis_window, self).__init__()
-        self.setupUi(self)
+        self.setupUi(newDialog)
+        self.commentDialog = newDialog
         self.setWindowTitle("NCSAS-评价分析")
         self.buttonReturn.clicked.connect(self.returnMain)
 
@@ -28,7 +28,7 @@ class comment_analysis_window(QWidget, Ui_Dialog):
         # self.hide()
         # self.testWindow = test()
         # self.testWindow.show()
-        self.close()
+        self.commentDialog.close()
 
 
 if __name__ == '__main__':

@@ -8,14 +8,11 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
-# 语句测试的界面(第一个版本,可以不要的版本)
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.resize(1118, 766)
-        self.commentDialog = Dialog
-        self.frameCommentAnalysis = QtWidgets.QFrame(Dialog)
+class Ui_CommentAnalysis(object):
+    def setupUi(self, CommentAnalysis):
+        CommentAnalysis.setObjectName("CommentAnalysis")
+        CommentAnalysis.resize(1118, 766)
+        self.frameCommentAnalysis = QtWidgets.QFrame(CommentAnalysis)
         self.frameCommentAnalysis.setGeometry(QtCore.QRect(0, 0, 1121, 771))
         self.frameCommentAnalysis.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frameCommentAnalysis.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -64,20 +61,14 @@ class Ui_Dialog(object):
 "}")
         self.labelExample.setObjectName("labelExample")
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(CommentAnalysis)
+        QtCore.QMetaObject.connectSlotsByName(CommentAnalysis)
 
-        self.buttonReturn.clicked.connect(self.returnMain)
-
-    # 返回主界面
-    def returnMain(self):
-        self.commentDialog.close()
-
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, CommentAnalysis):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.lineEditComment.setPlaceholderText(_translate("Dialog", "请在此输入一条或一段有关笔记本电脑的评论（不少于10个字）"))
-        self.buttonAnalyse.setText(_translate("Dialog", "开始分析"))
-        self.buttonReturn.setText(_translate("Dialog", "返回"))
-        self.labelExample.setText(_translate("Dialog", "示例：电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！"))
+        CommentAnalysis.setWindowTitle(_translate("CommentAnalysis", "Dialog"))
+        self.lineEditComment.setPlaceholderText(_translate("CommentAnalysis", "请在此输入一条或一段有关笔记本电脑的评论（不少于10个字）"))
+        self.buttonAnalyse.setText(_translate("CommentAnalysis", "开始分析"))
+        self.buttonReturn.setText(_translate("CommentAnalysis", "返回"))
+        self.labelExample.setText(_translate("CommentAnalysis", "示例：电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！"))
 

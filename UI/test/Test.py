@@ -12,14 +12,15 @@ from PyQt5.QtWidgets import *
 from mainlala import Ui_Form as UI_MAIN
 # from Window_comment_analysis import comment_analysis_window
 # from Window_archievement import archievement_window
-from dialog_comment_analysis import Ui_Dialog as comment_analysis_window
+# from dialog_comment_analysis import Ui_Dialog as comment_analysis_window
 # from dialog_archievement import Ui_Dialog as archievement_window
 
+from Window_comment_analysis import comment_analysis_window
 from Window_dialog_archievement import archievement_window
 
 from dialog_help import Ui_Form as help_window
 
-from Window_help_manual import help_manual_window as HMW
+from Window_help_manual import help_manual_window
 
 import sys
 
@@ -49,16 +50,15 @@ class test(UI_MAIN, QWidget):
 
     def switchToCommentAnalysis(self):
         self.hide()
-        newForm = QDialog()
-        newUi = comment_analysis_window()
-        newUi.setupUi(newForm)
-        newForm.show()
-        newForm.exec_()
+        newCommDiag = QDialog()
+        newUi = comment_analysis_window(newCommDiag)
+        newCommDiag.show()
+        newCommDiag.exec_()
         self.show()
 
     def switchToHelpManual(self):
         # 退出帮助
-        window.show()
+        HelpWindow.show()
 
     def exitMainWindow(self):
         # 退出系统触发
@@ -88,6 +88,6 @@ if __name__ == '__main__':
     TestWindow = test()
     # CommentWindow = comment_analysis_window()
     # ArchievementWindow = archievement_window()
-    window = HMW ()
+    HelpWindow = help_manual_window()
     TestWindow.show()
     sys.exit(app.exec_())
