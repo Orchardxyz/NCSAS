@@ -86,7 +86,7 @@ QTabBar::tab:pressed{
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="tabBarAutoHide">
      <bool>false</bool>
@@ -162,7 +162,7 @@ QTabBar::tab:pressed{
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabLenovo">
        <attribute name="title">
@@ -242,7 +242,7 @@ QToolBoxButton {
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="pagePraise">
           <widget class="QToolBox" name="toolBoxPraise">
@@ -262,8 +262,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -285,12 +285,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>去重</string>
+             <string>过滤</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid">
              <property name="geometry">
@@ -308,8 +308,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -326,7 +326,7 @@ QToolBoxButton {
              </property>
             </widget>
            </widget>
-           <widget class="QWidget" name="pageItemAttrScore">
+           <widget class="QWidget" name="pageItemStop">
             <property name="geometry">
              <rect>
               <x>0</x>
@@ -336,8 +336,18 @@ QToolBoxButton {
              </rect>
             </property>
             <attribute name="label">
-             <string>属性词得分</string>
+             <string>去停用词</string>
             </attribute>
+            <widget class="QTableView" name="tableViewStop">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>801</width>
+               <height>381</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </widget>
          </widget>
@@ -359,8 +369,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -382,12 +392,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>去重</string>
+             <string>过滤</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_2">
              <property name="geometry">
@@ -405,8 +415,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -423,18 +433,28 @@ QToolBoxButton {
              </property>
             </widget>
            </widget>
-           <widget class="QWidget" name="pageItemAttrScore_2">
+           <widget class="QWidget" name="pageItemStop_2">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>属性词得分</string>
+             <string>去停用词</string>
             </attribute>
+            <widget class="QTableView" name="tableViewStop_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>801</width>
+               <height>381</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </widget>
          </widget>
@@ -559,7 +579,7 @@ QToolBoxButton {
             </rect>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="pageItemComments_3">
             <property name="geometry">
@@ -589,12 +609,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>去重</string>
+             <string>过滤</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_3">
              <property name="geometry">
@@ -612,8 +632,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -630,18 +650,28 @@ QToolBoxButton {
              </property>
             </widget>
            </widget>
-           <widget class="QWidget" name="pageItemAttrScore_3">
+           <widget class="QWidget" name="pageItemStop_3">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>属性词得分</string>
+             <string>去停用词</string>
             </attribute>
+            <widget class="QTableView" name="tableViewStop_4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>811</width>
+               <height>381</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </widget>
          </widget>
@@ -686,12 +716,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>去重</string>
+             <string>过滤</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_4">
              <property name="geometry">
@@ -709,8 +739,8 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
@@ -727,18 +757,28 @@ QToolBoxButton {
              </property>
             </widget>
            </widget>
-           <widget class="QWidget" name="pageItemAttrScore_4">
+           <widget class="QWidget" name="pageItemStop_4">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>373</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>属性词得分</string>
+             <string>去停用词</string>
             </attribute>
+            <widget class="QTableView" name="tableViewStop_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>801</width>
+               <height>381</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </widget>
          </widget>
@@ -800,27 +840,6 @@ QToolBoxButton {
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QFrame" name="frame">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>90</y>
-         <width>1071</width>
-         <height>611</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QFrame{
- background-color:rgb(255, 255, 255)
-}</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-      </widget>
       <widget class="QFrame" name="frameVLenovo">
        <property name="geometry">
         <rect>
@@ -945,6 +964,29 @@ color:rgb(179, 179, 179)
         </property>
         <property name="text">
          <string>S</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="scrollAreaComparison">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>1071</width>
+         <height>601</height>
+        </rect>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1069</width>
+          <height>599</height>
+         </rect>
         </property>
        </widget>
       </widget>
