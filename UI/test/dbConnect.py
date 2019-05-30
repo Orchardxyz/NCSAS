@@ -13,7 +13,7 @@ import pymysql
 def dbConnect(tableName):
     try:
         # db = pymysql.connect("localhost", "root", "Xg123456", "preprocessing", charset='utf8')
-        db = pymysql.connect("localhost", "root", "123456", "preprocessing", charset='utf8')
+        db = pymysql.connect("localhost", "root", "123456", "interface_data", charset='utf8')
         cur = db.cursor()
         cur.execute("SELECT * FROM "+tableName+" WHERE id BETWEEN 1 AND 100")
         data = cur.fetchall()

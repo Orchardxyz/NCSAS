@@ -13,13 +13,13 @@ import matplotlib.pyplot as plt
 if __name__ == '__main__':
     # 从文件中读取标签及对应分值，存进字典
     hpAttr = {}
-    with open('../file/keys_score/hp_keys_score.txt', 'r', encoding='utf-8') as f:
+    with open('../resource/file/keys_score/hp_keys_score.txt', 'r', encoding='utf-8') as f:
         for line in f.readlines():
             temp = line.split(':')
             hpAttr[temp[0]] = float(temp[1].strip('\n'))
         print(hpAttr)
     lenovoAttr = {}
-    with open('../file/keys_score/lenovo_keys_score.txt', 'r', encoding='gbk') as f:
+    with open('../resource/file/keys_score/lenovo_keys_score.txt', 'r', encoding='gbk') as f:
         for line in f.readlines():
             temp = line.split(':')
             lenovoAttr[temp[0]] = float(temp[1].strip('\n'))
@@ -61,6 +61,6 @@ if __name__ == '__main__':
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
-    plt.savefig('../file/picture/attr_score_comparison.png')
+    plt.savefig('../resource/file/picture/attr_score_comparison.png')
 
     plt.show()

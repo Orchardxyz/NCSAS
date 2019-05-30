@@ -16,8 +16,11 @@ from dbConnect import dbConnect
 class archievement_window(QWidget, Ui_Archievements):
 
     # 原评论数据表名
-    # tableNameList = ['lenovoscoreneg', 'lenovoscorepos','hpscoreneg','hpscorepos']
-    tableNameList = ['lenovoscorepos', 'lenovoscoreneg', 'hpscorepos', 'hpscoreneg']
+    originalTableNameList = ['lenovo_pos_original', 'lenovo_neg_original', 'hp_pos_original', 'hp_neg_original']
+    # 过滤的数据表名
+    filterTableNameList = ['lenovo_pos_filter', 'lenovo_neg_filter', 'hp_pos_filter', 'hp_neg_filter']
+    # 分词标注的数据表名
+    segPosTableNameList = ['lenovo_pos_segandpos', 'lenovo_neg_segandpos', 'hp_pos_segandpos', 'hp_neg_segandpos' ]
 
     # def __init__(self):
     #     # 自己给自己初始化,可运行
@@ -63,6 +66,10 @@ class archievement_window(QWidget, Ui_Archievements):
 
         # 原评论数据表：[联想好评/差评，惠普好评/差评]
         self.originTable = [self.tableViewComments, self.tableViewComments_2, self.tableViewComments_3, self.tableViewComments_4]
+        # 过滤后的评论数据表：[联想好评/差评，惠普好评/差评]
+        self.filterTable = [self.tableViewGetRid, self.tableViewGetRid_2, self.tableViewGetRid_3, self.tableViewGetRid_4]
+        # 分词&标注&去停用词后的评论数据表：[联想好评/差评，惠普好评/差评]
+        self.segPosTable = [self.tableViewTagWords, self.tableViewTagWords_2, self.tableViewTagWords_3, self.tableViewTagWords_4]
 
         '''页面加载完毕时初始化页面组件'''
         # 设置默认tab
@@ -109,40 +116,52 @@ class archievement_window(QWidget, Ui_Archievements):
 
     '''-////////// [预处理]tab界面的事件处理及方法 //////////-'''
     '''联想/惠普 的 好评/差评 切换事件'''
+    # 联想好评
     def switchToLenovoPraise(self):
-        #联想好评
         self.buttonPraise.setStyleSheet(self.clickStyle)
         self.buttonBad.setStyleSheet(self.unclickStyle)
         self.stackedWidgetContentLenovo.setCurrentWidget(self.pagePraise)
+        # 数据连接
         self.loadingOriginData('lenovo', 0)
+        self.loadingFilterData('lenovo', 0)
+        self.loadingSegPosData('lenovo', 0)
 
+    # 联想差评
     def switchToLenovoBad(self):
-        #联想差评
         self.buttonBad.setStyleSheet(self.clickStyle)
         self.buttonPraise.setStyleSheet(self.unclickStyle)
         self.stackedWidgetContentLenovo.setCurrentWidget(self.pageBad)
+        # 数据连接
         self.loadingOriginData('lenovo', 1)
+        self.loadingFilterData('lenovo', 1)
+        self.loadingSegPosData('lenovo', 1)
 
+    # 惠普好评
     def switchToHpPraise(self):
-        #惠普好评
         self.buttonPraise_2.setStyleSheet(self.clickStyle)
         self.buttonBad_2.setStyleSheet(self.unclickStyle)
         self.stackedWidgetContentHp.setCurrentWidget(self.pagePraise_2)
+        # 数据连接
         self.loadingOriginData('hp', 2)
+        self.loadingFilterData('hp', 2)
+        self.loadingSegPosData('hp', 2)
 
+    # 惠普差评
     def switchToHpBad(self):
-        #惠普差评
         self.buttonBad_2.setStyleSheet(self.clickStyle)
         self.buttonPraise_2.setStyleSheet(self.unclickStyle)
         self.stackedWidgetContentHp.setCurrentWidget(self.pageBad_2)
+        # 数据连接
         self.loadingOriginData('hp', 3)
+        self.loadingFilterData('hp', 3)
+        self.loadingSegPosData('hp', 3)
 
     '''数据加载'''
     # 原评论
     def loadingOriginData(self, brand, index):
         comm_type = 'PRAISE:' if (index % 2 == 0) else 'BAD:'
         print(comm_type, brand, 'origin data loading...')
-        data = dbConnect(self.tableNameList[index])
+        data = dbConnect(self.originalTableNameList[index])
         row = len(data)  # 表格行数
         vol = 1  # 表格列数
         # 设置数据层次结构，10行2列
@@ -166,6 +185,68 @@ class archievement_window(QWidget, Ui_Archievements):
         # 所有列自动拉伸，充满界面，适用于列数较多且内容合适的表格model
         self.originTable[index].horizontalHeader().setStretchLastSection(True)
         self.originTable[index].horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+    # 过滤后的数据
+    def loadingFilterData(self, brand, index):
+        comm_type = 'PRAISE:' if (index % 2 == 0) else 'BAD:'
+        print(comm_type, brand, 'filter data loading...')
+        data = dbConnect(self.filterTableNameList[index])
+        row = len(data)  # 表格行数
+        vol = 1  # 表格列数
+        # 设置数据层次结构，10行2列
+        self.model = QStandardItemModel(10, 1)
+        # 设置水平方向四个头标签文本内容
+        self.model.setHorizontalHeaderLabels(['评论'])
+        for i in range(row):
+            for j in range(vol):
+                # 只展示“评论”列的数据
+                temp_data = data[i][j + 1]  # 临时记录，不能直接插入表格
+                item = QStandardItem(str(temp_data))
+                self.model.setItem(i, j, item)
+        self.filterTable[index].setModel(self.model)
+        if brand == 'lenovo':
+            self.stackedWidgetContentLenovo.setVisible(True)
+        else:
+            self.stackedWidgetContentHp.setVisible(True)
+        '''表格样式'''
+        # 设置行样式
+        self.filterTable[index].setAlternatingRowColors(True)
+        # 隐藏横向滚动条
+        self.filterTable[index].setHorizontalScrollBarPolicy(False)
+        # 所有列自动拉伸，充满界面，适用于列数较多且内容合适的表格model
+        self.filterTable[index].horizontalHeader().setStretchLastSection(True)
+        self.filterTable[index].horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+    # 原评论
+    def loadingSegPosData(self, brand, index):
+        comm_type = 'PRAISE:' if (index % 2 == 0) else 'BAD:'
+        print(comm_type, brand, 'seg and pos data loading...')
+        data = dbConnect(self.segPosTableNameList[index])
+        row = len(data)  # 表格行数
+        vol = 1  # 表格列数
+        # 设置数据层次结构，10行2列
+        self.model = QStandardItemModel(10, 1)
+        # 设置水平方向四个头标签文本内容
+        self.model.setHorizontalHeaderLabels(['评论'])
+        for i in range(row):
+            for j in range(vol):
+                # 只展示“评论”列的数据
+                temp_data = data[i][j + 1]  # 临时记录，不能直接插入表格
+                item = QStandardItem(str(temp_data))
+                self.model.setItem(i, j, item)
+        self.segPosTable[index].setModel(self.model)
+        if brand == 'lenovo':
+            self.stackedWidgetContentLenovo.setVisible(True)
+        else:
+            self.stackedWidgetContentHp.setVisible(True)
+        '''表格样式'''
+        # 设置行样式
+        self.segPosTable[index].setAlternatingRowColors(True)
+        # 隐藏横向滚动条
+        self.segPosTable[index].setHorizontalScrollBarPolicy(False)
+        # 所有列自动拉伸，充满界面，适用于列数较多且内容合适的表格model
+        self.segPosTable[index].horizontalHeader().setStretchLastSection(True)
+        self.segPosTable[index].horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
     '''-////////// [品牌对比]tab界面的事件处理及方法 //////////-'''
 
