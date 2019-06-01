@@ -140,7 +140,7 @@ def postagger_ltp(words):
     for i in range(len(tag_list)):
         out += words[i]+"/"+tag_list[i]+" "
     print("词性标注结果:",out)
-    return tag_list                #返回所有句子以及每个句子的词性列表
+    return tag_list,out                #返回所有句子以及每个句子的词性列表
 
 
 #读取txt文件(词典文件)
@@ -505,7 +505,11 @@ def sentence_analyse(sentence):
     word_list = seg_sentence_new(sentence_after_process)
     print("分词列表：",word_list)
 
-    tag_list = postagger_ltp(word_list)
+    word_list_str = ""
+    for word in word_list:
+        word_list_str += word + " "
+
+    tag_list,tag_out = postagger_ltp(word_list)
 
     arcs = parser_ltp_arc(word_list, tag_list)
 
@@ -517,8 +521,8 @@ def sentence_analyse(sentence):
         if (opinion_target not in dic.keys()):
             dic[opinion_target] = []
         dic[opinion_target].append(each[1:])
-    # 返回字典，预处理结果，分词列表，依存弧
-    return dic,sentence_after_process,word_list,arcs
+    # 1.返回字典，2.预处理结果，3.分词列表，4.依存弧,5.分词/预处理的字符串句子
+    return dic,sentence_after_process,word_list,arcs,tag_out,word_list_str
 
 if __name__ == '__main__':
 

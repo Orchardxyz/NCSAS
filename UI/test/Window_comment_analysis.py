@@ -45,10 +45,13 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
         print(sentence_str, "啦啦啦")
         sen_predict = self.one_sentence_predice()
 
-        dic, sentence_after_process, word_list, arcs = self.one_sentence_ltp()
+        dic, sentence_after_process, word_list, arcs, tag_out, word_list_str = self.one_sentence_ltp()
+
 
         print("返回的字典是什么：", dic)
-        print("依存句法分析Wie：", arcs)
+        print("返回的词列表是什么：", word_list)
+        print("返回的词性标注列表是什么：", tag_out)
+        print("返回处理之后的句子是什么", sentence_after_process)
 
         result_score = self.one_sentence_score(dic);
 
@@ -58,6 +61,49 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
 
 
         print("哈哈哈哈结束预测很简单的啦", sen_predict)
+
+        self.textBrowserGeneral.setText("")
+        self.textBrowserSegment.setText("")
+        self.textBrowserRuleAndScore.setText("")
+        self.textBrowserPostagger.setText("")
+
+
+        # 总体极性部分
+        if sen_predict == "positive":
+            self.textBrowserGeneral.setText(sentence_str + "\n" + "根据模型分析句子的情感倾向为：积极的情感倾向"+"（"+ sen_predict+"）")
+        else:
+            self.textBrowserGeneral.setText(sentence_str + "\n" + "根据模型分析句子的情感倾向为：消极的情感倾向"+"（"+ sen_predict+"）")
+
+
+
+        # 句子分词以及去停用词展示
+        if word_list_str.strip () != "":
+            self.textBrowserSegment.setText(word_list_str)
+
+        # 句子词性标注结果展示
+        if tag_out != "":
+            self.textBrowserPostagger.setText(tag_out)
+
+        # 规则抽取以及计算情感得分
+        if dic!={} and result_score!="":
+            rule_score_str = ""
+            dic_key = list(dic.keys())
+            for key in dic_key:
+                if len(dic[key])>0:
+                    rule_score_str += key + " : "
+                    for word_list in dic[key]:
+
+                        for word in word_list:
+                            rule_score_str += word + " "
+                        rule_score_str += "   |   "
+                    rule_score_str += "属性 <"+key +">"+" 得分为：" + str(result_score[key]) +"\n"
+
+            self.textBrowserRuleAndScore.setText(
+                "抽取词对如下：" + "\n" +
+                rule_score_str
+            )
+
+
 
 
     # 先对一句话进行总体预测
