@@ -34,6 +34,7 @@ class test(UI_MAIN, QWidget):
         self.comment_analysis_window = comment_analysis_window
         self.archievement_window = archievement_window
 
+        # 一句话分析按钮效果触发
         self.buttonCommentAnalysis.clicked.connect(self.switchToCommentAnalysis)
 
         # 帮助窗口
@@ -84,6 +85,7 @@ class test(UI_MAIN, QWidget):
 
 
 if __name__ == '__main__':
+    # 电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！
     app = QApplication(sys.argv)
     TestWindow = test()
     # CommentWindow = comment_analysis_window()

@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'dialog_comment_analysis.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_CommentAnalysis(object):
     def setupUi(self, CommentAnalysis):
@@ -70,5 +71,6 @@ class Ui_CommentAnalysis(object):
         self.lineEditComment.setPlaceholderText(_translate("CommentAnalysis", "请在此输入一条或一段有关笔记本电脑的评论（不少于10个字）"))
         self.buttonAnalyse.setText(_translate("CommentAnalysis", "开始分析"))
         self.buttonReturn.setText(_translate("CommentAnalysis", "返回"))
-        self.labelExample.setText(_translate("CommentAnalysis", "示例：电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！"))
+        self.labelExample.setText(_translate("CommentAnalysis", "示例：外观很漂亮，开机非常迅速，运行流畅，电池耐用，总体来说，性价比很不错！"))
+
 

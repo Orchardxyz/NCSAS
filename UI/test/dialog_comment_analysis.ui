@@ -129,7 +129,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>示例：电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！</string>
+     <string>示例：外观很漂亮，开机非常迅速，运行流畅，电池耐用，总体来说，性价比很不错！</string>
     </property>
    </widget>
   </widget>

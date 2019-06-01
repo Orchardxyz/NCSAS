@@ -1,0 +1,2 @@
+1. lstm_model文件夹中sentimemt_lstm_self_model.py是用来训练和预测的代码
+2. word2vec文件夹下是lstm训练好的模型，只需要调用  sentimemt_lstm_self_model.py  lstm_sentence_predict函数即可
