@@ -31,7 +31,7 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
         self.buttonAnalyse.clicked.connect(self.one_sentence_analyse)
 
         # 点击图示按钮进行操作
-        self.buttonShowDiaGram.clicked.connect(self.showDiaGram)
+        # self.buttonShowDiaGram.clicked.connect(self.showDiaGram)
 
 
 
