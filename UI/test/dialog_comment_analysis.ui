@@ -51,7 +51,7 @@
    <widget class="QFrame" name="frameAnalysisResult">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>70</x>
       <y>140</y>
       <width>981</width>
       <height>551</height>
@@ -72,9 +72,9 @@
     <widget class="QTextBrowser" name="textBrowserGeneral">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>50</y>
-       <width>941</width>
+       <x>0</x>
+       <y>43</y>
+       <width>981</width>
        <height>81</height>
       </rect>
      </property>
@@ -94,45 +94,53 @@ background:#F2F2F2
     <widget class="QLabel" name="labelGeneralEmotion">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>10</y>
-       <width>141</width>
+       <x>0</x>
+       <y>0</y>
+       <width>221</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
 	font-size:22px;
+background: #6495ED;
 }</string>
      </property>
      <property name="text">
       <string>总体情感倾向</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="labelSegment">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>140</y>
-       <width>161</width>
+       <x>0</x>
+       <y>126</y>
+       <width>221</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
 	font-size:22px;
+background: #6495ED;
 }</string>
      </property>
      <property name="text">
       <string>分词及去停用词</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <widget class="QTextBrowser" name="textBrowserSegment">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>180</y>
-       <width>941</width>
+       <x>0</x>
+       <y>169</y>
+       <width>981</width>
        <height>81</height>
       </rect>
      </property>
@@ -152,27 +160,33 @@ background:#F2F2F2
     <widget class="QLabel" name="labelPostagger">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>270</y>
-       <width>161</width>
+       <x>0</x>
+       <y>252</y>
+       <width>221</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
 	font-size:22px;
-}</string>
+background: #6495ED;
+text-align:center;
+}
+</string>
      </property>
      <property name="text">
       <string>词性标注</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QTextBrowser" name="textBrowserPostagger">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>310</y>
-       <width>941</width>
+       <x>0</x>
+       <y>295</y>
+       <width>981</width>
        <height>81</height>
       </rect>
      </property>
@@ -192,28 +206,34 @@ background:#F2F2F2
     <widget class="QLabel" name="labelRuleAndScore">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>400</y>
-       <width>251</width>
+       <x>0</x>
+       <y>379</y>
+       <width>221</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLabel{
 	font-size:22px;
-}</string>
+background: #6495ED;
+text-align:center;
+}
+</string>
      </property>
      <property name="text">
-      <string>规则抽取及计算情感得分</string>
+      <string>词对抽取&amp;属性得分</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QTextBrowser" name="textBrowserRuleAndScore">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>440</y>
-       <width>941</width>
-       <height>81</height>
+       <x>0</x>
+       <y>421</y>
+       <width>981</width>
+       <height>131</height>
       </rect>
      </property>
      <property name="font">
@@ -227,6 +247,31 @@ background:#F2F2F2
       <string notr="true">QTextBrowser{
 background:#F2F2F2
 }</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonShowDiaGram">
+     <property name="geometry">
+      <rect>
+       <x>259</x>
+       <y>379</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	font-size: 18px;
+    font-style: bold;
+    background: #6495ED;
+    border-style: outset;
+    border-radius: 10px;
+}
+QPushButton:pressed {
+	background: #BEBEBE;
+}</string>
+     </property>
+     <property name="text">
+      <string>图示</string>
      </property>
     </widget>
    </widget>

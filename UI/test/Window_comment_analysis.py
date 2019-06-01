@@ -30,6 +30,9 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
         # 点击开始分析的按钮开始尽心分析
         self.buttonAnalyse.clicked.connect(self.one_sentence_analyse)
 
+        # 点击图示按钮进行操作
+        self.buttonShowDiaGram.clicked.connect(self.showDiaGram)
+
 
 
     # 返回主界面
@@ -128,6 +131,10 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
             score_result =  key_score.key_score(dic)
             return score_result
         return ""
+
+    # 显示图片
+    # def showDiaGram(self):
+
 
 
 

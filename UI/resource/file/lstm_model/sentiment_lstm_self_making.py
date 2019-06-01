@@ -321,7 +321,7 @@ def input_tranform(string):
 
     test_str = ""
 
-    print(words,"阿斯顿发按时大V阿萨德")
+    print(words)
 
 
     _, _, combined = create_dictionaries(model, words)
