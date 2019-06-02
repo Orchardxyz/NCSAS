@@ -20,9 +20,9 @@ def get_degree_adverb_words():
     
     '''
     #  陈jia棋修改为全路径，为节省时间暂时这样子
-    # degree_adverb_words_file = open("./sentiment_label_dicts/degree_adverb_words.txt", 'r',encoding='gbk')
+    degree_adverb_words_file = open("D:/DaChuang/sentiment_label_dicts/degree_adverb_words.txt", 'r')
 
-    degree_adverb_words_file = open("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/sentiment_label_dicts/degree_adverb_words.txt", 'r',encoding='gbk')
+    # degree_adverb_words_file = open("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/sentiment_label_dicts/degree_adverb_words.txt", 'r',encoding='gbk')
     degree_adverb_words = eval(degree_adverb_words_file.read())
     return degree_adverb_words
 
@@ -57,9 +57,12 @@ def key_score(dict):
                                   形容词由工具包（"wordScore.py"）计算得到。
                                  公式为：标签得分  = 否定词得分  * 程度副词得分  * 形容词得分
     '''
+    print("start")
     degree_adverb_words = get_degree_adverb_words()
     key_score_dict = {}
+    print("start222")
     key_score_dict = key_score_dict.fromkeys(dict.keys())  # 以需要评分的属性词为key值构建评分字典
+    print("否定词的输出")
     for key in dict.keys():  # key即属性词
         current_key_score = 0  # 当前key的得分
         minus_score_list = []  # 存储负分值

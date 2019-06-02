@@ -9,6 +9,8 @@
 @desc:
 '''
 from PyQt5.QtWidgets import *
+from qtpy import QtCore
+
 from mainlala import Ui_Form as UI_MAIN
 # from Window_comment_analysis import comment_analysis_window
 # from Window_archievement import archievement_window
@@ -40,7 +42,7 @@ class test(UI_MAIN, QWidget):
         # 帮助窗口
         self.help_window = help_window
 
-        # 帮助手册按钮触发事件
+        # 帮助手册按钮触发的事件
         self.buttonHelp.clicked.connect(self.switchToHelpManual)
 
         # 退出系统

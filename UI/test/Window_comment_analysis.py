@@ -9,11 +9,9 @@
 @desc:
 '''
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
 from dialog_comment_analysis import Ui_CommentAnalysis
 import sys
 import resource.file.lstm_model.sentiment_lstm_self_making as predict_file
-# import resource.file.ltp_analyse.main as ltp_main
 import resource.file.ltp_analyse.main_test as ltp_main  #陈jia棋后面加上去的分词，采用ltp分词工具替代结巴
 import resource.file.score.key_score as key_score
 
@@ -128,7 +126,9 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
     def one_sentence_score(self, dic):
         sentence_str3 = self.lineEditComment.text ()
         if dic is not None and sentence_str3 is not None:
-            score_result =  key_score.key_score(dic)
+            # print(dic, sentence_str3)
+            score_result = key_score.key_score(dic)
+            print("老师老师老师了", score_result)
             return score_result
         return ""
 

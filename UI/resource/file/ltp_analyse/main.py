@@ -141,11 +141,11 @@ def ltp_seg_sentiment_word(one_list):
 
 
     # adv_dic = get_dict('adv_dic.txt')
-    # neg_dic = get_dict('neg_dic.txt')
+    # neg_dic = get_dict('否定词词典.txt')
 
     # 陈jia棋修改过路径，为节省时间，暂时用全路径
     adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
-    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/neg_dic.txt')
+    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/否定词词典.txt')
 
 
 
@@ -202,13 +202,13 @@ def extract_noun_base_pager_rule(sentence, arcs, pos):
     # noun_list = get_dict('CNoun.txt')
     # verb_list = get_dict('CVerb.txt')
     # adv_dic = get_dict('adv_dic.txt')
-    # neg_dic = get_dict('neg_dic.txt')
+    # neg_dic = get_dict('否定词词典.txt')
 
     # 陈jia棋修改过路径，为节省时间，暂时用全路径
     noun_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CNoun.txt')
     verb_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CVerb.txt')
     adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
-    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/neg_dic.txt')
+    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/否定词词典.txt')
 
 
     one_list = [] #存放每条评论抽出来的词对

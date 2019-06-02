@@ -316,8 +316,8 @@ def train():
 def input_tranform(string):
     words = jieba.lcut(string)
     words = np.array(words).reshape(1, -1)
-    # model = Word2Vec.load("Word2vec/Word2vec_model_change1.pkl")
-    model = Word2Vec.load("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/Word2vec_model_change1.pkl")
+    model = Word2Vec.load("D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/lstm_model/Word2vec/Word2vec_model_change1.pkl")
+    # model = Word2Vec.load("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/Word2vec_model_change1.pkl")
 
     test_str = ""
 
@@ -332,13 +332,18 @@ def input_tranform(string):
 def lstm_sentence_predict(string):
     print("loading model加载模型...")
     # "UI/resource/file/lstm_model/Word2vec/lstm.yml"
-    with open("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/lstm.yml", 'r') as f:
+    # with open("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/lstm.yml", 'r') as f:
+    #     yaml_string = yaml.load(f)
+    # with open('./Word2vec/lstm.yml', 'r') as f:
+    #     yaml_string = yaml.load(f)
+    with open("D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/lstm_model/Word2vec/lstm.yml", 'r') as f:
         yaml_string = yaml.load(f)
 
     model = model_from_yaml(yaml_string)
 
     print("loading weights... 加载权重")
-    model.load_weights("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/lstm.h5")
+    # model.load_weights("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/lstm_model/Word2vec/lstm.h5")
+    model.load_weights("D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/lstm_model/Word2vec/lstm.h5")
     model.compile(loss="binary_crossentropy",
                   optimizer='adam',
                   metrics=['accuracy'])
@@ -373,7 +378,7 @@ def lstm_batch_predict(db_user, db_password, db_name, sql):
         
     '''
     print("loading model加载模型...")
-    with open('Word2vec/lstm.yml', 'r') as f:
+    with open('./Word2vec/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
     model = model_from_yaml(yaml_string)
     print("loading weights... 加载权重")

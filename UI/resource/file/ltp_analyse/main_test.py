@@ -20,10 +20,12 @@ from pyltp import Parser
 # LTP_DATA_DIR = 'E:/ltp_data_v3.4.0/'  # ltp模型目录的路径
 
 # 陈jia棋修改过路径，为节省时间，暂时用全路径
-LTP_DATA_DIR = "/Users/chenjiaqi/Downloads/addition-jar/ltp_data_v3.4.0"
+# LTP_DATA_DIR = "/Users/chenjiaqi/Downloads/addition-jar/ltp_data_v3.4.0"
+# LTP_DATA_DIR = "D:/DaChuang/代码/PycharmProjects/LTP/ltp_data_v3.4"
+LTP_DATA_DIR = "D:/DaChuang/LTP/3.3.1/ltp_data"
 pos_model_path = os.path.join(LTP_DATA_DIR, 'pos.model')  # 词性标注模型路径，模型名称为`pos.model`
 par_model_path = os.path.join(LTP_DATA_DIR, 'parser.model')
-seg_model_path = os.path.join(LTP_DATA_DIR,'cws.model') #分词模型
+seg_model_path = os.path.join(LTP_DATA_DIR, 'cws.model') #分词模型
 
 #处理空白字符和&;
 def sentence_process(sentence):
@@ -93,6 +95,7 @@ def seg_sentence_new(sentence):
     ## 注意：这里改写成ltp的分词工具
     segmentor = Segmentor ()  # 初始化实例
     segmentor.load(seg_model_path) #加载模型
+    print("经过分词工具")
     # 先加载自定义的词典
     # segmentor.load_with_lexicon (seg_model_path, "/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/connect_word_zhuang.txt")  # 加载模型，第二个参数是您的外部词典文件路径
     # segmentor.load_with_lexicon (seg_model_path, "/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt")  # 加载模型，第二个参数是您的外部词典文件路径
@@ -107,9 +110,14 @@ def seg_sentence_new(sentence):
     # stopword_replace = stopwordslist("stop_words_replace.txt",encode='utf-8') #用来替换的标点符号
 
     # 陈jia棋修改过路径，为节省时间，暂时用全路径
-    stopwords = stopwordslist ('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_main.txt', encode='utf-8')  # 主要的停用词（修改过的）
-    stopwords_extra = stopwordslist ('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_punctuation.txt', encode='utf-8')  # 一些符号、颜表情
-    stopword_replace = stopwordslist ("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_replace.txt", encode='utf-8')  # 用来替换的标点符号
+    # stopwords = stopwordslist ('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_main.txt', encode='utf-8')  # 主要的停用词（修改过的）
+    # stopwords_extra = stopwordslist ('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_punctuation.txt', encode='utf-8')  # 一些符号、颜表情
+    # stopword_replace = stopwordslist ("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/stop_words_replace.txt", encode='utf-8')  # 用来替换的标点符号
+
+    # JGY
+    stopwords = stopwordslist ('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/stop_words_main.txt', encode='utf-8')  # 主要的停用词（修改过的）
+    stopwords_extra = stopwordslist ('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/stop_words_punctuation.txt', encode='utf-8')  # 一些符号、颜表情
+    stopword_replace = stopwordslist ("D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/stop_words_replace.txt", encode='utf-8')  # 用来替换的标点符号
     # 停用词合并
     for i in stopwords_extra:
         stopwords.append(i)
@@ -159,15 +167,17 @@ def ltp_seg_sentiment_word(one_list):
     segmentor = Segmentor()  # 初始化实例
     segmentor.load(seg_model_path)  # 加载模型
 
-
+    # 相对路径
     # adv_dic = get_dict('adv_dic.txt')
-    # neg_dic = get_dict('neg_dic.txt')
+    # neg_dic = get_dict('否定词词典.txt')
 
     # 陈jia棋修改过路径，为节省时间，暂时用全路径
-    adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
-    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/neg_dic.txt')
+    # adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
+    # neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/否定词词典.txt')
 
-
+    # JGY
+    adv_dic = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/adv_dic.txt')
+    neg_dic = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/neg_dic.txt')
 
     relist = []
     for each in one_list:
@@ -222,14 +232,18 @@ def extract_noun_base_pager_rule(sentence, arcs, pos):
     # noun_list = get_dict('CNoun.txt')
     # verb_list = get_dict('CVerb.txt')
     # adv_dic = get_dict('adv_dic.txt')
-    # neg_dic = get_dict('neg_dic.txt')
+    # neg_dic = get_dict('否定词词典.txt')
 
     # 陈jia棋修改过路径，为节省时间，暂时用全路径
-    noun_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CNoun.txt')
-    verb_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CVerb.txt')
-    adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
-    neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/neg_dic.txt')
+    # noun_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CNoun.txt')
+    # verb_list = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/CVerb.txt')
+    # adv_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/adv_dic.txt')
+    # neg_dic = get_dict('/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/ltp_analyse/否定词词典.txt')
 
+    noun_list = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/CNoun.txt')
+    verb_list = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/CVerb.txt')
+    adv_dic = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/adv_dic.txt')
+    neg_dic = get_dict('D:/DaChuang/代码/PycharmProjects/computerSentimentAnalysis/UI/resource/file/ltp_analyse/neg_dic.txt')
 
     one_list = [] #存放每条评论抽出来的词对
     for flag in range(len(sentence)):

@@ -18,14 +18,16 @@ def word_score(word):
                     词的情感趋势值
                     
     '''
-    # if not jpype.isJVMStarted():
-    #     jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=similarity.jar",
-    #                     "-Djava.ext.dirs=dependency")
+    if not jpype.isJVMStarted():
+        # D: / DaChuang / 代码 / PycharmProjects / computerSentimentAnalysis / UI / resource / file / score /
+        # D: / DaChuang / 代码 / PycharmProjects / computerSentimentAnalysis / UI / resource / file / score /
+        jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=similarity.jar",
+                        "-Djava.ext.dirs=dependency")
 
     # 陈jia棋修改为全局路径，节省时间
-    if not jpype.isJVMStarted():
-        jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/similarity.jar",
-                        "-Djava.ext.dirs=/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/dependency")
+    # if not jpype.isJVMStarted():
+    #     jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/similarity.jar",
+    #                     "-Djava.ext.dirs=/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/dependency")
 
     HownetWordTendencyClass = jpype.JClass("org.xm.tendency.word.HownetWordTendency")
     tendencyInstance = HownetWordTendencyClass()  # 创建计算词情感趋势的实例

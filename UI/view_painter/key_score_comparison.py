@@ -8,6 +8,7 @@
 @time: 2019/5/30 00:04
 @desc:
 '''
+'''两个品牌的主要属性评分对比'''
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
@@ -17,13 +18,13 @@ if __name__ == '__main__':
         for line in f.readlines():
             temp = line.split(':')
             hpAttr[temp[0]] = float(temp[1].strip('\n'))
-        print(hpAttr)
+        print('惠普：', hpAttr)
     lenovoAttr = {}
     with open('../resource/file/keys_score/lenovo_keys_score.txt', 'r', encoding='gbk') as f:
         for line in f.readlines():
             temp = line.split(':')
             lenovoAttr[temp[0]] = float(temp[1].strip('\n'))
-        print(lenovoAttr)
+        print('联想：', lenovoAttr)
 
     # 显示部分标签（25个）
     x = ['内存', '屏幕', '颜值', '声音', '性能', '硬盘', '品牌',
@@ -43,15 +44,16 @@ if __name__ == '__main__':
 
     # 绘制图形
     import numpy as np
-    fig = plt.figure(figsize=(9, 6))    # 设置尺寸
+
+    fig = plt.figure(figsize=(9.5, 6))  # 设置尺寸
     ax = fig.add_subplot(111)
     index = np.arange(len(x))
     bar_width = 0.5
     # y轴显示
-    plt.bar(index, lenovoValue, bar_width-0.05, color='#B3B3B3', label='联想')
-    plt.bar(index+bar_width, hpValue, bar_width-0.05, color='#4C4C4C', label='惠普')
-    plt.xticks(index+bar_width, x)  # x轴
-    plt.rcParams['font.sans-serif'] = ['SimHei']    # 设置显示中文
+    plt.bar(index, lenovoValue, bar_width - 0.05, color='#B3B3B3', label='联想')
+    plt.bar(index + bar_width, hpValue, bar_width - 0.05, color='#4C4C4C', label='惠普')
+    plt.xticks(index + bar_width, x)  # x轴
+    plt.rcParams['font.sans-serif'] = ['SimHei']  # 设置显示中文
     ax.set_xticklabels(x, rotation=40)  # 横轴坐标斜着显示
     plt.rcParams['axes.unicode_minus'] = False  # 显示负轴的负号
     plt.ylim(ymax=0.8)

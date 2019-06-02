@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="dictionary">
+    <file>adv_dict.png</file>
+    <file>conj_dict.png</file>
+    <file>attr_dict.png</file>
+    <file>neg_dict.png</file>
+    <file>stop_dict.png</file>
+  </qresource>
+</RCC>

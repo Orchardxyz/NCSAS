@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="picture">
+    <file>lenovo_tendency.png</file>
+    <file>hp_tendency.png</file>
+    <file>attr_score_comparison.png</file>
+  </qresource>
+</RCC>

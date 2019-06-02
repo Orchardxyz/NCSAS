@@ -98,17 +98,25 @@ class archievement_window(QWidget, Ui_Archievements):
         self.buttonPraise.clicked.connect(self.switchToLenovoPraise)
 
         '''-******** [品牌对比]tab界面设置 ********-'''
+        self.scrollAreaComparison.setStyleSheet("QScrollArea {background-color:#FFF;}")
+        self.scrollAreaComparison.viewport().setStyleSheet("background-color:transparent;")
 
         '''-******** [词典]tab界面设置 ********-'''
+        # 初始化
+        self.dictAttributes.setStyleSheet(self.clickStyle)
+        self.stackedWidgetDict.setCurrentIndex(0)
+        self.path = '../view_painter/file'
         # 建立词典按钮列表
-        self.dictionaryButtons = [self.dictAttributes, self.dictSentiment, self.dictAdverbs,
+        self.dictionaryButtons = [self.dictAttributes, self.dictNegWords, self.dictAdverbs,
                                   self.dictConjunctions, self.dictStopWords]
         # lambda表达式传参
         self.dictAttributes.clicked.connect(lambda: self.dictClicked(0))
-        self.dictSentiment.clicked.connect(lambda: self.dictClicked(1))
+        self.dictNegWords.clicked.connect(lambda: self.dictClicked(1))
         self.dictAdverbs.clicked.connect(lambda: self.dictClicked(2))
         self.dictConjunctions.clicked.connect(lambda: self.dictClicked(3))
         self.dictStopWords.clicked.connect(lambda: self.dictClicked(4))
+
+        self.pushButton.clicked.connect(self.openDictFile)
 
     # 返回主界面
     def returnMain(self):
@@ -217,7 +225,7 @@ class archievement_window(QWidget, Ui_Archievements):
         self.filterTable[index].horizontalHeader().setStretchLastSection(True)
         self.filterTable[index].horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
-    # 原评论
+    # 分词标注
     def loadingSegPosData(self, brand, index):
         comm_type = 'PRAISE:' if (index % 2 == 0) else 'BAD:'
         print(comm_type, brand, 'seg and pos data loading...')
@@ -258,9 +266,17 @@ class archievement_window(QWidget, Ui_Archievements):
         for i in range(0, len(self.dictionaryButtons)):
             if i != index:
                 self.dictionaryButtons[i].setStyleSheet(self.unclickStyle)
+        # 词云展示
+        self.stackedWidgetDict.setCurrentIndex(index)
 
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     window = archievement_window()
-#     window.show()
-#     sys.exit(app.exec_())
+    # 查看词典的源文件
+    def openDictFile(self):
+        fileName_choose, filetype = \
+            QFileDialog.getOpenFileName(self,"选取文件", self.path,  # 起始路径
+                                         "Text Files (*.txt)")  # 设置文件扩展名过滤,用双分号间隔
+        if fileName_choose == "":
+            print("\n取消选择")
+            return
+        # 使用系统默认方式打开文件
+        import os
+        os.system(fileName_choose)
