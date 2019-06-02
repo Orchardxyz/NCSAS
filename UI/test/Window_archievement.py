@@ -19,7 +19,7 @@ class archievement_window(QWidget, Ui_Form):
         super(archievement_window, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("NCSAS-研究成果")
-
+        self.setFixedSize(self.width(), self.height())
 
     def returnMain(self):
         self.close()

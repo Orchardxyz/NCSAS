@@ -54,13 +54,20 @@
       <x>70</x>
       <y>140</y>
       <width>981</width>
-      <height>551</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QFrame {
 	background-color: white;
 	border-radius: 5px;
+}
+QLabel {
+	background: #6495ED;
+	font-size: 25px;
+	font-family: &quot;KaiTi&quot;;
+	border-top-right-radius: 16%;
+	border-bottom-right-radius: 16%
 }</string>
     </property>
     <property name="frameShape">
@@ -80,7 +87,7 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -101,10 +108,7 @@ background:#F2F2F2
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-	font-size:22px;
-background: #6495ED;
-}</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>总体情感倾向</string>
@@ -123,10 +127,7 @@ background: #6495ED;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-	font-size:22px;
-background: #6495ED;
-}</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>分词及去停用词</string>
@@ -146,7 +147,7 @@ background: #6495ED;
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -167,12 +168,7 @@ background:#F2F2F2
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-	font-size:22px;
-background: #6495ED;
-text-align:center;
-}
-</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>词性标注</string>
@@ -192,7 +188,7 @@ text-align:center;
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -213,12 +209,7 @@ background:#F2F2F2
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">QLabel{
-	font-size:22px;
-background: #6495ED;
-text-align:center;
-}
-</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>词对抽取&amp;属性得分</string>
@@ -233,12 +224,12 @@ text-align:center;
        <x>0</x>
        <y>421</y>
        <width>981</width>
-       <height>131</height>
+       <height>151</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>20</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -252,17 +243,17 @@ background:#F2F2F2
     <widget class="QPushButton" name="buttonShowDiaGram">
      <property name="geometry">
       <rect>
-       <x>259</x>
-       <y>379</y>
-       <width>101</width>
+       <x>250</x>
+       <y>380</y>
+       <width>71</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	font-size: 18px;
+	font-size: 20px;
     font-style: bold;
-    background: #6495ED;
+	background: rgb(214, 71, 0);
     border-style: outset;
     border-radius: 10px;
 }
@@ -272,6 +263,28 @@ QPushButton:pressed {
      </property>
      <property name="text">
       <string>图示</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="buttonTendency">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>0</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#buttonTendency {
+	font-size: 20px;
+    font-style: bold;
+	background: #FFF;
+    border-style: outset;
+    border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -335,6 +348,25 @@ QPushButton:pressed {
     </property>
     <property name="text">
      <string>示例：外观很漂亮，开机非常迅速，运行流畅，电池耐用，总体来说，性价比很不错！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTip">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	font-size: 17px;
+	font-family: &quot;KaiTi&quot;
+}</string>
+    </property>
+    <property name="text">
+     <string>tip: 分析过程请耐心等候哦</string>
     </property>
    </widget>
   </widget>

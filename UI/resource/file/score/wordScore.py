@@ -21,8 +21,8 @@ def word_score(word):
     if not jpype.isJVMStarted():
         # D: / DaChuang / 代码 / PycharmProjects / computerSentimentAnalysis / UI / resource / file / score /
         # D: / DaChuang / 代码 / PycharmProjects / computerSentimentAnalysis / UI / resource / file / score /
-        jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=similarity.jar",
-                        "-Djava.ext.dirs=dependency")
+        jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=D:/DaChuang/File/similarity.jar",
+                        "-Djava.ext.dirs=D:/DaChuang/File/dependency")
 
     # 陈jia棋修改为全局路径，节省时间
     # if not jpype.isJVMStarted():

@@ -24,7 +24,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">* {
-	background: rgb(255,255,255);
+	/*background: rgb(255,255,255);*/
+	background: url(':image/computer1');
 	font-size: 15px;
 	font-family: sans-serif;
 }
@@ -60,10 +61,24 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>350</y>
+      <y>380</y>
       <width>221</width>
       <height>101</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#buttonArchievement {
+	background: rgb(223, 218, 204);
+	font-size: 35px;
+	font-style: bold;
+	font-family: SimHei;
+	border: 2px solid;
+	border-radius: 5px;
+}
+#buttonArchievement:pressed {
+	background-color: white;
+	border-style: inset;
+}</string>
     </property>
     <property name="text">
      <string>研究成果</string>
@@ -73,13 +88,27 @@ QPushButton:pressed {
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>200</y>
+      <y>230</y>
       <width>221</width>
       <height>101</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
      <enum>Qt::NoContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#buttonCommentAnalysis {
+	background: rgb(223, 218, 204);
+	font-size: 35px;
+	font-style: bold;
+	font-family: SimHei;
+	border: 2px solid;
+	border-radius: 5px;
+}
+#buttonCommentAnalysis:pressed {
+	background-color: white;
+	border-style: inset;
+}</string>
     </property>
     <property name="text">
      <string>评价分析</string>
@@ -136,9 +165,32 @@ font-weight: bold;
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="labelTitle">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>671</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #F8F8FF;
+	font-size: 50px;
+	font-weight: bold;
+	font-family: STXinwei
+}</string>
+    </property>
+    <property name="text">
+     <string>笔记本在线评论情感分析系统</string>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="qrc/bg.qrc"/>
+ </resources>
  <connections/>
  <slots>
   <slot>exit()</slot>
