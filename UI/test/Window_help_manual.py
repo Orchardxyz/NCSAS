@@ -14,6 +14,7 @@ class help_manual_window(QWidget, Ui_Form):
         super(help_manual_window, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("帮助手册")
+        self.setFixedSize(self.width(), self.height())
         self.pushButton.clicked.connect(self.returnMain)
 
     # 返回主界面

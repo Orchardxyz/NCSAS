@@ -104,7 +104,7 @@ background:#F2F2F2
        <x>0</x>
        <y>0</y>
        <width>221</width>
-       <height>41</height>
+       <height>43</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -121,9 +121,9 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>126</y>
+       <y>120</y>
        <width>221</width>
-       <height>41</height>
+       <height>43</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -140,7 +140,7 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>169</y>
+       <y>163</y>
        <width>981</width>
        <height>81</height>
       </rect>
@@ -162,9 +162,9 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>252</y>
+       <y>242</y>
        <width>221</width>
-       <height>41</height>
+       <height>43</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -181,7 +181,7 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>295</y>
+       <y>284</y>
        <width>981</width>
        <height>81</height>
       </rect>
@@ -203,7 +203,7 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>379</y>
+       <y>366</y>
        <width>221</width>
        <height>41</height>
       </rect>
@@ -222,9 +222,9 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>421</y>
+       <y>407</y>
        <width>981</width>
-       <height>151</height>
+       <height>165</height>
       </rect>
      </property>
      <property name="font">
@@ -244,7 +244,7 @@ background:#F2F2F2
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>380</y>
+       <y>366</y>
        <width>71</width>
        <height>41</height>
       </rect>
@@ -269,7 +269,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>0</y>
+       <y>1</y>
        <width>71</width>
        <height>41</height>
       </rect>
@@ -347,7 +347,7 @@ QPushButton:pressed {
 }</string>
     </property>
     <property name="text">
-     <string>示例：外观很漂亮，开机非常迅速，运行流畅，电池耐用，总体来说，性价比很不错！</string>
+     <string>示例：外观很漂亮，开机非常快，运行流畅，电池耐用，总体来说，性价比很高！</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelTip">
@@ -355,7 +355,7 @@ QPushButton:pressed {
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>221</width>
+      <width>231</width>
       <height>16</height>
      </rect>
     </property>

@@ -53,17 +53,17 @@ class Ui_CommentAnalysis(object):
 "}")
         self.textBrowserGeneral.setObjectName("textBrowserGeneral")
         self.labelGeneralEmotion = QtWidgets.QLabel(self.frameAnalysisResult)
-        self.labelGeneralEmotion.setGeometry(QtCore.QRect(0, 0, 221, 41))
+        self.labelGeneralEmotion.setGeometry(QtCore.QRect(0, 0, 221, 43))
         self.labelGeneralEmotion.setStyleSheet("")
         self.labelGeneralEmotion.setAlignment(QtCore.Qt.AlignCenter)
         self.labelGeneralEmotion.setObjectName("labelGeneralEmotion")
         self.labelSegment = QtWidgets.QLabel(self.frameAnalysisResult)
-        self.labelSegment.setGeometry(QtCore.QRect(0, 126, 221, 41))
+        self.labelSegment.setGeometry(QtCore.QRect(0, 120, 221, 43))
         self.labelSegment.setStyleSheet("")
         self.labelSegment.setAlignment(QtCore.Qt.AlignCenter)
         self.labelSegment.setObjectName("labelSegment")
         self.textBrowserSegment = QtWidgets.QTextBrowser(self.frameAnalysisResult)
-        self.textBrowserSegment.setGeometry(QtCore.QRect(0, 169, 981, 81))
+        self.textBrowserSegment.setGeometry(QtCore.QRect(0, 163, 981, 81))
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(False)
@@ -74,12 +74,12 @@ class Ui_CommentAnalysis(object):
 "}")
         self.textBrowserSegment.setObjectName("textBrowserSegment")
         self.labelPostagger = QtWidgets.QLabel(self.frameAnalysisResult)
-        self.labelPostagger.setGeometry(QtCore.QRect(0, 252, 221, 41))
+        self.labelPostagger.setGeometry(QtCore.QRect(0, 242, 221, 43))
         self.labelPostagger.setStyleSheet("")
         self.labelPostagger.setAlignment(QtCore.Qt.AlignCenter)
         self.labelPostagger.setObjectName("labelPostagger")
         self.textBrowserPostagger = QtWidgets.QTextBrowser(self.frameAnalysisResult)
-        self.textBrowserPostagger.setGeometry(QtCore.QRect(0, 295, 981, 81))
+        self.textBrowserPostagger.setGeometry(QtCore.QRect(0, 284, 981, 81))
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(False)
@@ -90,12 +90,12 @@ class Ui_CommentAnalysis(object):
 "}")
         self.textBrowserPostagger.setObjectName("textBrowserPostagger")
         self.labelRuleAndScore = QtWidgets.QLabel(self.frameAnalysisResult)
-        self.labelRuleAndScore.setGeometry(QtCore.QRect(0, 379, 221, 41))
+        self.labelRuleAndScore.setGeometry(QtCore.QRect(0, 366, 221, 41))
         self.labelRuleAndScore.setStyleSheet("")
         self.labelRuleAndScore.setAlignment(QtCore.Qt.AlignCenter)
         self.labelRuleAndScore.setObjectName("labelRuleAndScore")
         self.textBrowserRuleAndScore = QtWidgets.QTextBrowser(self.frameAnalysisResult)
-        self.textBrowserRuleAndScore.setGeometry(QtCore.QRect(0, 421, 981, 151))
+        self.textBrowserRuleAndScore.setGeometry(QtCore.QRect(0, 407, 981, 165))
         font = QtGui.QFont()
         font.setPointSize(16)
         font.setBold(False)
@@ -106,7 +106,7 @@ class Ui_CommentAnalysis(object):
 "}")
         self.textBrowserRuleAndScore.setObjectName("textBrowserRuleAndScore")
         self.buttonShowDiaGram = QtWidgets.QPushButton(self.frameAnalysisResult)
-        self.buttonShowDiaGram.setGeometry(QtCore.QRect(250, 380, 71, 41))
+        self.buttonShowDiaGram.setGeometry(QtCore.QRect(250, 366, 71, 41))
         self.buttonShowDiaGram.setStyleSheet("QPushButton {\n"
 "    font-size: 20px;\n"
 "    font-style: bold;\n"
@@ -119,7 +119,7 @@ class Ui_CommentAnalysis(object):
 "}")
         self.buttonShowDiaGram.setObjectName("buttonShowDiaGram")
         self.buttonTendency = QtWidgets.QPushButton(self.frameAnalysisResult)
-        self.buttonTendency.setGeometry(QtCore.QRect(250, 0, 71, 41))
+        self.buttonTendency.setGeometry(QtCore.QRect(250, 1, 71, 41))
         self.buttonTendency.setStyleSheet("#buttonTendency {\n"
 "    font-size: 20px;\n"
 "    font-style: bold;\n"
@@ -156,7 +156,7 @@ class Ui_CommentAnalysis(object):
 "}")
         self.labelExample.setObjectName("labelExample")
         self.labelTip = QtWidgets.QLabel(self.frameCommentAnalysis)
-        self.labelTip.setGeometry(QtCore.QRect(10, 10, 221, 16))
+        self.labelTip.setGeometry(QtCore.QRect(10, 10, 231, 16))
         self.labelTip.setStyleSheet("QLabel {\n"
 "    font-size: 17px;\n"
 "    font-family: \"KaiTi\"\n"
@@ -177,6 +177,6 @@ class Ui_CommentAnalysis(object):
         self.buttonShowDiaGram.setText(_translate("CommentAnalysis", "图示"))
         self.buttonAnalyse.setText(_translate("CommentAnalysis", "开始分析"))
         self.buttonReturn.setText(_translate("CommentAnalysis", "返回"))
-        self.labelExample.setText(_translate("CommentAnalysis", "示例：外观很漂亮，开机非常迅速，运行流畅，电池耐用，总体来说，性价比很不错！"))
+        self.labelExample.setText(_translate("CommentAnalysis", "示例：外观很漂亮，开机非常快，运行流畅，电池耐用，总体来说，性价比很高！"))
         self.labelTip.setText(_translate("CommentAnalysis", "tip: 分析过程请耐心等候哦"))
 

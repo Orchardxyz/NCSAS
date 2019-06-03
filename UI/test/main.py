@@ -11,19 +11,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1124, 712)
+        Form.resize(1118, 712)
         self.frameMain = QtWidgets.QFrame(Form)
         self.frameMain.setGeometry(QtCore.QRect(0, 0, 1121, 711))
         self.frameMain.setStyleSheet("* {\n"
-"    /*background: rgb(255,255,255);*/\n"
-"    background: url(\':image/computer1\');\n"
 "    font-size: 15px;\n"
 "    font-family: sans-serif;\n"
 "}\n"
-"QFrame {\n"
+"#frameMain {\n"
 "    border: solid 1px rgba(0,0,0);\n"
-"    /*background-image: url(:/main/newmainla.png);\n"
-"    background: #FFFFF0;*/\n"
+"    background: url(\':image/computer11.png\');\n"
 "}\n"
 "\n"
 "QPushButton {\n"
@@ -99,7 +96,7 @@ class Ui_Form(object):
         self.labelTitle = QtWidgets.QLabel(self.frameMain)
         self.labelTitle.setGeometry(QtCore.QRect(230, 80, 671, 51))
         self.labelTitle.setStyleSheet("QLabel {\n"
-"    color: #F8F8FF;\n"
+"    color: rgb(0, 118, 177);\n"
 "    font-size: 50px;\n"
 "    font-weight: bold;\n"
 "    font-family: STXinwei\n"

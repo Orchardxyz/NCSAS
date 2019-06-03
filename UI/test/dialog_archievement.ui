@@ -86,7 +86,7 @@ QTabBar::tab:pressed{
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="tabBarAutoHide">
      <bool>false</bool>
@@ -162,7 +162,7 @@ QTabBar::tab:pressed{
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabLenovo">
        <attribute name="title">
@@ -242,7 +242,7 @@ QToolBoxButton {
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="pagePraise">
           <widget class="QToolBox" name="toolBoxPraise">
@@ -255,7 +255,7 @@ QToolBoxButton {
             </rect>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="pageItemComments">
             <property name="geometry">
@@ -290,7 +290,7 @@ QToolBoxButton {
              </rect>
             </property>
             <attribute name="label">
-             <string>过滤</string>
+             <string>过滤无效评论</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid">
              <property name="geometry">
@@ -339,7 +339,7 @@ QToolBoxButton {
             </rect>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="pageItemComments_2">
             <property name="geometry">
@@ -369,12 +369,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>410</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>过滤</string>
+             <string>过滤无效评论</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_2">
              <property name="geometry">
@@ -438,12 +438,18 @@ QToolBoxButton {
           <rect>
            <x>0</x>
            <y>10</y>
-           <width>381</width>
+           <width>451</width>
            <height>16</height>
           </rect>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	font-size: 17px;
+	font-family: &quot;KaiTi&quot;
+}</string>
+         </property>
          <property name="text">
-          <string>点击不同按钮即可选择查看不同评价的预处理数据</string>
+          <string>tip:点击不同按钮即可选择查看不同评价的预处理数据</string>
          </property>
         </widget>
        </widget>
@@ -520,7 +526,7 @@ QToolBoxButton {
 }</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="pagePraise_2">
           <widget class="QToolBox" name="toolBoxPraise_2">
@@ -533,7 +539,7 @@ QToolBoxButton {
             </rect>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="pageItemComments_3">
             <property name="geometry">
@@ -563,12 +569,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>410</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>过滤</string>
+             <string>过滤无效评论</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_3">
              <property name="geometry">
@@ -617,7 +623,7 @@ QToolBoxButton {
             </rect>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="pageItemComments_4">
             <property name="geometry">
@@ -647,12 +653,12 @@ QToolBoxButton {
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>801</width>
+              <height>410</height>
              </rect>
             </property>
             <attribute name="label">
-             <string>过滤</string>
+             <string>过滤无效评论</string>
             </attribute>
             <widget class="QTableView" name="tableViewGetRid_4">
              <property name="geometry">
@@ -710,12 +716,18 @@ QToolBoxButton {
           <rect>
            <x>0</x>
            <y>10</y>
-           <width>381</width>
+           <width>451</width>
            <height>16</height>
           </rect>
          </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	font-size: 17px;
+	font-family: &quot;KaiTi&quot;
+}</string>
+         </property>
          <property name="text">
-          <string>点击不同按钮即可选择查看不同评价的预处理数据</string>
+          <string>tip:点击不同按钮即可选择查看不同评价的预处理数据</string>
          </property>
         </widget>
        </widget>
@@ -896,7 +908,7 @@ color:rgb(179, 179, 179)
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-701</y>
+          <y>0</y>
           <width>1048</width>
           <height>1300</height>
          </rect>
