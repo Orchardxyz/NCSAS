@@ -4,7 +4,7 @@
 @author: jgy
 
 @software: Pycharm
-@file: Test.py
+@file: Window_main.py
 @time: 2019/5/4 15:04
 @desc:
 '''

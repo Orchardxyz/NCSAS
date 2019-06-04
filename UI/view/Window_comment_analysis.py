@@ -39,7 +39,7 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
     # 返回主界面
     def returnMain(self):
         # self.hide()
-        # self.testWindow = test()
+        # self.testWindow = view()
         # self.testWindow.show()
         self.commentDialog.close()
 
@@ -170,5 +170,5 @@ if __name__ == '__main__':
     ui = comment_analysis_window()
     ui.setupUi(Dialog)
     Dialog.show()
-    # testWindow = test()
+    # testWindow = view()
     sys.exit(app.exec_())

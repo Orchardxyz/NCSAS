@@ -20,8 +20,6 @@ def get_degree_adverb_words():
                     程度副词评分字典
     
     '''
-    #  陈jia棋修改为全路径，为节省时间暂时这样子
-
     filepath = os.path.dirname (os.path.abspath (__file__))
     degree_adverb_words_file_dir = os.path.join(filepath, "sentiment_label_dicts/degree_adverb_words.txt")
     degree_adverb_words_file = open(degree_adverb_words_file_dir, 'r', encoding='gbk')
