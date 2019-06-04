@@ -10,6 +10,7 @@ Created on 2019年5月5日
 
 
 from wordScore import word_score
+import os
 
 
 def get_degree_adverb_words():
@@ -20,9 +21,10 @@ def get_degree_adverb_words():
     
     '''
     #  陈jia棋修改为全路径，为节省时间暂时这样子
-    degree_adverb_words_file = open("D:/DaChuang/File/sentiment_label_dicts/degree_adverb_words.txt", 'r')
 
-    # degree_adverb_words_file = open("/Users/chenjiaqi/PycharmProjects/NCSAS/UI/resource/file/score/sentiment_label_dicts/degree_adverb_words.txt", 'r',encoding='gbk')
+    filepath = os.path.dirname (os.path.abspath (__file__))
+    degree_adverb_words_file_dir = os.path.join(filepath, "sentiment_label_dicts/degree_adverb_words.txt")
+    degree_adverb_words_file = open(degree_adverb_words_file_dir, 'r', encoding='gbk')
     degree_adverb_words = eval(degree_adverb_words_file.read())
     return degree_adverb_words
 

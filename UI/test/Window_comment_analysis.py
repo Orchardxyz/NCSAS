@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import *
 from dialog_comment_analysis import Ui_CommentAnalysis
 import sys
 import resource.file.lstm_model.sentiment_lstm_self_making as predict_file
-import resource.file.ltp_analyse.main_test as ltp_main  # 陈jia棋后面加上去的分词，采用ltp分词工具替代结巴
+import resource.file.ltp_analyse.main_test as ltp_main  #ltp分词
 import resource.file.score.key_score as key_score
 
 
@@ -57,10 +57,6 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
         print("返回处理之后的句子是什么", sentence_after_process)
 
         result_score = self.one_sentence_score(dic);
-
-        print(result_score, "结束啦做完啦")
-
-        print("哈哈哈哈结束预测很简单的啦", sen_predict)
 
         self.textBrowserGeneral.setText("")
         self.textBrowserSegment.setText("")

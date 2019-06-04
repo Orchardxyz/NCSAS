@@ -22,30 +22,6 @@ class archievement_window(QWidget, Ui_Archievements):
     # 分词标注的数据表名
     segPosTableNameList = ['lenovo_pos_segandpos', 'lenovo_neg_segandpos', 'hp_pos_segandpos', 'hp_neg_segandpos' ]
 
-    # def __init__(self):
-    #     # 自己给自己初始化,可运行
-    #     super(archievement_window, self).__init__()
-    #     self.setupUi(self)
-    #     self.setWindowTitle("NCSAS-研究成果")
-    #
-    #     self.buttonReturn.clicked.connect(self.returnMain)
-    #
-    #
-    #
-    #
-    #
-    #     #惠普差评的跳转
-    #     self.buttonBad_2.clicked.connect(self.switchToHpBad)
-    #
-    #     #联想好评的跳转
-    #     self.buttonPraise_2.clicked.connect(self.switchToHpPraise)
-    #
-    #     # 联想差评的跳转
-    #     self.buttonBad.clicked.connect (self.switchToLenovoBad)
-    #
-    #     # 联想好评的跳转
-    #     self.buttonPraise.clicked.connect (self.switchToLenovoPraise)
-
     # 下面这个init是第二次试验版本的
     def __init__(self, newDialog):
         # 自己给自己初始化

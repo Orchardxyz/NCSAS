@@ -7,9 +7,6 @@
 import pymysql
 
 # 连接数据库
-
-
-
 def dbConnect(tableName):
     try:
         # db = pymysql.connect("localhost", "root", "Xg123456", "preprocessing", charset='utf8')
@@ -25,7 +22,5 @@ def dbConnect(tableName):
         print('ERROR: 数据库连接失败！')
         return None
 
-# if __name__ == "__main__":
-#     data = dbConnect("lenovoscoreneg")
-#     print(data[2])
+
 

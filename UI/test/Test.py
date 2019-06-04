@@ -65,16 +65,6 @@ class test(UI_MAIN, QWidget):
         self.close()
 
     def switchToArchievement(self):
-        # 可运行的第一次
-        # self.hide()
-        # newArchDiag = QDialog()
-        # newArchUi = archievement_window()
-        # newArchUi.setupUi(newArchDiag)
-        # newArchDiag.show()
-        # newArchDiag.exec_()
-        # self.show()
-
-        # 第二次试验，测试成功，就用这个
         self.hide()
         newArchDiag = QDialog()
         newArchUi = archievement_window(newArchDiag)
@@ -87,8 +77,6 @@ if __name__ == '__main__':
     # 电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！
     app = QApplication(sys.argv)
     TestWindow = test()
-    # CommentWindow = comment_analysis_window()
-    # ArchievementWindow = archievement_window()
     HelpWindow = help_manual_window()
     TestWindow.show()
     sys.exit(app.exec_())

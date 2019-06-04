@@ -28,6 +28,5 @@ if __name__ == '__main__':
     ui = help_manual_window()
     ui.setupUi(Form)
     Form.show()
-    # testWindow = test()
     sys.exit(app.exec_())
 
