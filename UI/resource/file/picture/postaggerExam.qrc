@@ -1,0 +1,6 @@
+<RCC>
+  <qresource/>
+  <qresource prefix="postaggerPic">
+    <file>postagger.png</file>
+  </qresource>
+</RCC>
