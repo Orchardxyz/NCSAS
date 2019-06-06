@@ -8,8 +8,9 @@
 @time: 2019/5/4 15:04
 @desc:
 '''
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtGui import QCloseEvent
 from PyQt5.QtWidgets import *
-from qtpy import QtCore
 
 from main import Ui_Form as UI_MAIN
 
@@ -29,7 +30,7 @@ class test(UI_MAIN, QWidget):
         super(test, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Notebook Computer Sentiment Analysis System")
-        self.setFixedSize(self.width()-3, self.height()-3)
+        self.setFixedSize(self.width() - 3, self.height() - 3)
         self.comment_analysis_window = comment_analysis_window
         self.archievement_window = archievement_window
 
@@ -42,8 +43,8 @@ class test(UI_MAIN, QWidget):
         # 帮助手册按钮触发的事件
         self.buttonHelp.clicked.connect(self.switchToHelpManual)
 
-        # 退出系统
-        self.buttonExit.clicked.connect(self.exitMainWindow)
+        # 直接退出系统
+        self.buttonExit.clicked.connect(QCoreApplication.instance().quit)
 
         # 研究成果按钮触发
         self.buttonArchievement.clicked.connect(self.switchToArchievement)
@@ -60,9 +61,13 @@ class test(UI_MAIN, QWidget):
         # 退出帮助
         HelpWindow.show()
 
-    def exitMainWindow(self):
-        # 退出系统触发
-        self.close()
+    # 系统自带，右上角关闭窗口时弹出提示
+    def closeEvent(self, event):  # 关闭窗口触发以下事件
+        reply = QMessageBox.question(self, '消息框标题', '你确定要退出本系统吗?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            event.accept()  # 接受关闭事件
+        else:
+            event.ignore()
 
     def switchToArchievement(self):
         self.hide()

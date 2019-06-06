@@ -14,6 +14,10 @@ class Ui_CommentAnalysis(object):
         CommentAnalysis.resize(1118, 766)
         self.frameCommentAnalysis = QtWidgets.QFrame(CommentAnalysis)
         self.frameCommentAnalysis.setGeometry(QtCore.QRect(0, 0, 1121, 771))
+        self.frameCommentAnalysis.setStyleSheet("#labelWarn {\n"
+"    font-size: 22px;\n"
+"    color: red\n"
+"}")
         self.frameCommentAnalysis.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frameCommentAnalysis.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frameCommentAnalysis.setObjectName("frameCommentAnalysis")
