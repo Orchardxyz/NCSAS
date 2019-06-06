@@ -110,7 +110,7 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.buttonArchievement.setText(_translate("Form", "研究成果"))
-        self.buttonCommentAnalysis.setText(_translate("Form", "评价分析"))
+        self.buttonCommentAnalysis.setText(_translate("Form", "评论分析"))
         self.buttonHelp.setText(_translate("Form", "帮助手册"))
         self.buttonExit.setText(_translate("Form", "退出"))
         self.labelTitle.setText(_translate("Form", "笔记本在线评论情感分析系统"))
