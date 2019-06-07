@@ -17,8 +17,8 @@ from pyltp import Parser
 
 '''
 
-# LTP_DATA_DIR = "/Users/chenjiaqi/Downloads/addition-jar/ltp_data_v3.4.0"
-LTP_DATA_DIR = "D:/DaChuang/LTP/3.3.1/ltp_data"
+LTP_DATA_DIR = "/Users/chenjiaqi/Downloads/addition-jar/ltp_data_v3.4.0"
+# LTP_DATA_DIR = "D:/DaChuang/LTP/3.3.1/ltp_data"
 pos_model_path = os.path.join(LTP_DATA_DIR, 'pos.model')  # 词性标注模型路径，模型名称为`pos.model`
 par_model_path = os.path.join(LTP_DATA_DIR, 'parser.model')
 seg_model_path = os.path.join(LTP_DATA_DIR, 'cws.model') #分词模型

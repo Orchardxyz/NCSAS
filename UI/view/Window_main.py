@@ -17,8 +17,6 @@ from main import Ui_Form as UI_MAIN
 from Window_comment_analysis import comment_analysis_window
 from Window_dialog_archievement import archievement_window
 
-from dialog_help import Ui_Form as help_window
-
 from Window_help_manual import help_manual_window
 
 import sys
@@ -38,7 +36,7 @@ class test(UI_MAIN, QWidget):
         self.buttonCommentAnalysis.clicked.connect(self.switchToCommentAnalysis)
 
         # 帮助窗口
-        self.help_window = help_window
+        self.HelpWindow = help_manual_window()
 
         # 帮助手册按钮触发的事件
         self.buttonHelp.clicked.connect(self.switchToHelpManual)
@@ -59,7 +57,7 @@ class test(UI_MAIN, QWidget):
 
     def switchToHelpManual(self):
         # 退出帮助
-        HelpWindow.show()
+        self.HelpWindow.show()
 
     # 系统自带，右上角关闭窗口时弹出提示
     def closeEvent(self, event):  # 关闭窗口触发以下事件
@@ -82,6 +80,6 @@ if __name__ == '__main__':
     # 电脑外观很漂亮大气，开机迅速，运行流畅，系统也很好，性价比太高了！
     app = QApplication(sys.argv)
     TestWindow = test()
-    HelpWindow = help_manual_window()
+    # HelpWindow = help_manual_window()
     TestWindow.show()
     sys.exit(app.exec_())

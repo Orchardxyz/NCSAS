@@ -11,6 +11,8 @@ import sys
 
 from dbConnect import dbConnect
 
+from Window_dict_help import help_dict_window
+
 
 # 研究成果展示页面运行入口2，现在正在使用
 class archievement_window(QWidget, Ui_Archievements):
@@ -93,6 +95,10 @@ class archievement_window(QWidget, Ui_Archievements):
         self.dictStopWords.clicked.connect(lambda: self.dictClicked(4))
 
         self.pushButton.clicked.connect(self.openDictFile)
+
+        #词典帮助说明
+        self.pushButtonExplain.clicked.connect(self.dictHelpWindow)
+
 
     # 返回主界面
     def returnMain(self):
@@ -256,3 +262,11 @@ class archievement_window(QWidget, Ui_Archievements):
         # 使用系统默认方式打开文件
         import os
         os.system(fileName_choose)
+
+    # 查看词典的帮助说明
+    def dictHelpWindow(self):
+        newDictHelpDialog = QDialog()
+        newUi = help_dict_window(newDictHelpDialog)
+        newDictHelpDialog.show()
+        newDictHelpDialog.exec_ ()
+

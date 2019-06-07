@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="loginbg">
+    <file>computerlogin.png</file>
+  </qresource>
+</RCC>
