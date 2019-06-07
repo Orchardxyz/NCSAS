@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'login.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -76,7 +75,5 @@ class Ui_Form(object):
         self.buttonLogin.setText(_translate("Form", "Login"))
         self.inputUsername.setPlaceholderText(_translate("Form", "Enter Your Username"))
         self.inputPassword.setPlaceholderText(_translate("Form", "Enter Your Password"))
-
-
 
 import qrc.loginbg

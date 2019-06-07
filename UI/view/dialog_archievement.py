@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'dialog_archievement.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_Archievements(object):
     def setupUi(self, Archievements):
@@ -198,7 +197,7 @@ class Ui_Archievements(object):
         self.tableViewComments_2.setObjectName("tableViewComments_2")
         self.toolBoxBad.addItem(self.pageItemComments_2, "")
         self.pageItemGetRid_2 = QtWidgets.QWidget()
-        self.pageItemGetRid_2.setGeometry(QtCore.QRect(0, 0, 100, 30))
+        self.pageItemGetRid_2.setGeometry(QtCore.QRect(0, 0, 801, 410))
         self.pageItemGetRid_2.setObjectName("pageItemGetRid_2")
         self.tableViewGetRid_2 = QtWidgets.QTableView(self.pageItemGetRid_2)
         self.tableViewGetRid_2.setGeometry(QtCore.QRect(0, 0, 801, 411))
@@ -303,7 +302,7 @@ class Ui_Archievements(object):
         self.tableViewComments_4.setObjectName("tableViewComments_4")
         self.toolBoxBad_2.addItem(self.pageItemComments_4, "")
         self.pageItemGetRid_4 = QtWidgets.QWidget()
-        self.pageItemGetRid_4.setGeometry(QtCore.QRect(0, 0, 801, 401))
+        self.pageItemGetRid_4.setGeometry(QtCore.QRect(0, 0, 801, 410))
         self.pageItemGetRid_4.setObjectName("pageItemGetRid_4")
         self.tableViewGetRid_4 = QtWidgets.QTableView(self.pageItemGetRid_4)
         self.tableViewGetRid_4.setGeometry(QtCore.QRect(0, 0, 801, 411))
@@ -398,11 +397,14 @@ class Ui_Archievements(object):
         self.scrollAreaComparison.setGeometry(QtCore.QRect(10, 90, 1071, 601))
         self.scrollAreaComparison.setStyleSheet("QScrollArea {\n"
 "    background: #FFF;\n"
+"}\n"
+"#scrollAreaWidgetContents {\n"
+"    background: #FFF;\n"
 "}")
         self.scrollAreaComparison.setWidgetResizable(True)
         self.scrollAreaComparison.setObjectName("scrollAreaComparison")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1054, 1300))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1048, 1300))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(0, 1300))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.frameASC = QtWidgets.QFrame(self.scrollAreaWidgetContents)
@@ -569,7 +571,7 @@ class Ui_Archievements(object):
         self.buttonReturn.setObjectName("buttonReturn")
 
         self.retranslateUi(Archievements)
-        self.tabArchievements.setCurrentIndex(2)
+        self.tabArchievements.setCurrentIndex(1)
         self.tabBrand.setCurrentIndex(1)
         self.stackedWidgetContentLenovo.setCurrentIndex(1)
         self.toolBoxPraise.setCurrentIndex(1)
@@ -638,8 +640,8 @@ class Ui_Archievements(object):
         self.textEditResultAnalysis.setHtml(_translate("Archievements", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'.SF NS Text\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'SimSun\'; font-size:9pt;\"><br /></p>\n"
+"</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'宋体\'; font-size:14pt;\">    通过粗粒度分析可以看出二者在相同数据量的前提下其好评率与差评率都相差无几，而通过细粒度的属性评分方法，可以得到联想和惠普各自的属性评分。这里只选择其中主要的25个属性词进行对比，得到结果如图所示。从结果可以看出，品牌属性的评分均在[-1,1]区间内浮动，惠普笔记本的内存、屏幕、硬盘、运行等评价属性的正向情感倾向均比联想的笔记本的高，但从鼠标、做工、散热等评价属性得分可以看出，联想笔记本更胜一筹。从总体上来说，惠普笔记本的硬件设备受到更多的好评。</span></p></body></html>"))
         self.ButtonResultAnalysis.setText(_translate("Archievements", "结果与分析"))
         self.tabArchievements.setTabText(self.tabArchievements.indexOf(self.tabBrandComparison), _translate("Archievements", "品牌对比"))
@@ -652,7 +654,6 @@ class Ui_Archievements(object):
         self.pushButtonExplain.setText(_translate("Archievements", "词典说明"))
         self.tabArchievements.setTabText(self.tabArchievements.indexOf(self.tabDictionary), _translate("Archievements", "词典"))
         self.buttonReturn.setText(_translate("Archievements", "返回"))
-
 
 import resource.file.picture.attr_score_comparison
 import resource.file.picture.dictionary

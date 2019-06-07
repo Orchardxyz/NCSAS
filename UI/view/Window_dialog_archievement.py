@@ -33,7 +33,7 @@ class archievement_window(QWidget, Ui_Archievements):
 
         self.archieveDialog = newDialog
         self.archieveDialog.setWindowTitle("NCSAS-研究成果")
-
+        self.setFixedSize(self.width(), self.height())
         self.buttonReturn.clicked.connect(self.returnMain)
 
         # 按钮点击时的样式切换
@@ -76,8 +76,6 @@ class archievement_window(QWidget, Ui_Archievements):
         self.buttonPraise.clicked.connect(self.switchToLenovoPraise)
 
         '''-******** [品牌对比]tab界面设置 ********-'''
-        self.scrollAreaComparison.setStyleSheet("QScrollArea {background-color:#FFF;}")
-        self.scrollAreaComparison.viewport().setStyleSheet("background-color:transparent;")
 
         '''-******** [词典]tab界面设置 ********-'''
         # 初始化

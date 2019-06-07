@@ -32,6 +32,20 @@ class Ui_Form(object):
         self.textBrowser.setObjectName("textBrowser")
         self.pushButton = QtWidgets.QPushButton(self.frame)
         self.pushButton.setGeometry(QtCore.QRect(810, 540, 113, 41))
+        self.pushButton.setStyleSheet("QPushButton {\n"
+"    background: #FFF;\n"
+"    border: 1px solid;\n"
+"    border-radius: 5px;\n"
+"    font-size: 26px;\n"
+"    font-weight: bold;\n"
+"    font-family: \"KaiTi\";\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background: rgb(209, 209, 209);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background: rgb(200, 200, 200);\n"
+"}")
         self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(Form)

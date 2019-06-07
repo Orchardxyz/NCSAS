@@ -113,7 +113,7 @@ QLabel {
   </widget>
  </widget>
  <resources>
-  <include location="../.idea/UI/img/bg.qrc"/>
+  <include location="../qrc/loginbg.qrc"/>
   <include location="../qrc/loginbg.qrc"/>
  </resources>
  <connections/>

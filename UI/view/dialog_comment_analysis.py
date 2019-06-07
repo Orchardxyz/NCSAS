@@ -173,7 +173,7 @@ class Ui_CommentAnalysis(object):
     def retranslateUi(self, CommentAnalysis):
         _translate = QtCore.QCoreApplication.translate
         CommentAnalysis.setWindowTitle(_translate("CommentAnalysis", "Dialog"))
-        self.lineEditComment.setPlaceholderText(_translate("CommentAnalysis", "请在此输入一条或一段有关笔记本电脑的评论（不少于10个字）"))
+        self.lineEditComment.setPlaceholderText(_translate("CommentAnalysis", "请在此输入一条或一段有关笔记本电脑的评论（不少于5个字）"))
         self.labelGeneralEmotion.setText(_translate("CommentAnalysis", "总体情感倾向"))
         self.labelSegment.setText(_translate("CommentAnalysis", "分词及去停用词"))
         self.labelPostagger.setText(_translate("CommentAnalysis", "词性标注"))

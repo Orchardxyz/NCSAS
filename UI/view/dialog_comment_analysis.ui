@@ -51,7 +51,7 @@
 }</string>
     </property>
     <property name="placeholderText">
-     <string>请在此输入一条或一段有关笔记本电脑的评论（不少于10个字）</string>
+     <string>请在此输入一条或一段有关笔记本电脑的评论（不少于5个字）</string>
     </property>
    </widget>
    <widget class="QFrame" name="frameAnalysisResult">

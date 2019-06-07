@@ -43,7 +43,7 @@ class comment_analysis_window(QWidget, Ui_CommentAnalysis):
     # 对一句话进行分析
     def one_sentence_analyse(self):
         sentence_str = self.lineEditComment.text()
-        if len(sentence_str) < 10:
+        if len(sentence_str) < 5:
             self.textBrowserGeneral.setText("暂无数据！请确认输入内容是否符合要求")
             self.textBrowserRuleAndScore.setText("暂无数据！请确认输入内容是否符合要求")
             self.textBrowserPostagger.setText("暂无数据！请确认输入内容是否符合要求")

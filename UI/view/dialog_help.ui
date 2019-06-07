@@ -102,6 +102,22 @@ p, li { white-space: pre-wrap; }
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background: #FFF;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: &quot;KaiTi&quot;;
+}
+QPushButton:hover {
+	background: rgb(209, 209, 209);
+}
+QPushButton:pressed {
+	background: rgb(200, 200, 200);
+}</string>
+    </property>
     <property name="text">
      <string>关闭</string>
     </property>
